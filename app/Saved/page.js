@@ -1,5 +1,5 @@
 import FlashOnIcon from '@mui/icons-material/FlashOn';
-import styles from './myaccount.module.css';
+import styles from './saved.module.css';
 import Link from 'next/link';
 
 function SignIn() {
@@ -17,17 +17,34 @@ function SignIn() {
             <button className={styles.aboutButton}>Home</button>
           </Link>
         </header>
+
       <div className={styles.contentWrapper}>
-        <h2 className={styles.subTitle}>My Account</h2>
-          <div className={styles.infoContainer}>
-              <p className={styles.infoText}>First Name:</p>
-              <p className={styles.infoText}>Last Name:</p>
-              <p className={styles.infoText}>Email:</p>
-              <p className={styles.infoText}>Date Joined:</p>
-              <p className={styles.infoText}>Subscription Status:</p>
-          </div>       
-          <button type="button" className={styles.deleteButton}>Delete My Account</button>
+        <div className={styles.tableContainer}>
+          <table>
+            <caption>Saved Cards</caption>
+            <thead>
+              <tr>
+                <th>Language</th>
+                <th>Question</th>
+                <th>Answer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+
        {/* Footer Section */}
        <footer className={styles.footer}>
           <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>

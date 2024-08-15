@@ -61,54 +61,48 @@
   color: #1B1287;
 }
 
-.subTitle {
-  font-size: 2rem;
-  text-align: center;
-}
-
-.infoContainer {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  border-radius: 10px;
-  margin-top: 30px;
-  padding: 30px;
+.tableContainer {
+  margin: 30px auto;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  text-align: left;
-}
-
-.infoText {
-  margin-top: 30px;
-  font-size: 20px;
-  padding-left: 10px;
-  color: #1B1287;
-  background-color: rgb(71, 148, 237, 0.5);
-  font-weight: bold;
-}
-
-.deleteButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: white;
-  color: #1B1287;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
+  max-width: 800px;
+  overflow-x: auto;
+  border-collapse: collapse;
   font-family: 'Fira Code', monospace;
-  transition: all 0.3s ease;
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 
-.deleteButton:hover {
-  background-color: red;
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer th,
+.tableContainer td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #070421;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.tableContainer th {
+  background-color: #1B1287;
   color: white;
-  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.tableContainer tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tableContainer tr:hover {
+  background-color: #ddd;
+}
+
+.tableContainer caption {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
 }
 
 .footer {
