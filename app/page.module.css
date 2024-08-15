@@ -1,68 +1,142 @@
-/* page.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
 .main {
-  background-color: var(--background-color);
-  color: var(--foreground-color);
+  background: linear-gradient(#070421, #1B1287);
+  color: #FFFFFF;
+  font-family: 'Fira Code', monospace;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.signInContainer {
+  display: flex;
+  align-items: center;
+}
+
+.signInButton {
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.signInButton:hover {
+  background-color: #FFFFFF;
+  color: #1B1287;
 }
 
 .hero {
-  background-color: var(--secondary-background-color);
-  padding: 4rem 0;
   text-align: center;
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 100px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 50px;
+  margin: 60px 30px;
+}
+
+.ctaButton {
+  background-color: #F2F2F2;
+  color: #0D1B2A;
+  padding: 10px 100px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace;
+  transition: all 0.3s ease-in-out;
+}
+
+.ctaButton:hover {
+  font-size: 25px;
+}
+
+.ctaContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.learnMore {
+  text-align: center;
+  font-size: 60px;
+  margin: 10px 0;
+}
+
+.learnMoreLink {
+  font-size: 30px;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.learnMoreLink::after {
+  content: '⌄';
+  display: block;
+  font-size: 50px;
 }
 
 .features {
-  padding: 4rem 0;
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.featureCards {
+  padding: 40px 20px;
   display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.card {
-  max-width: 300px;
-  padding: 1rem;
-  background-color: var(--secondary-background-color);
-  color: var(--foreground-color);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.pricing {
-  background-color: var(--background-color);
-  padding: 4rem 0;
-  color: var(--foreground-color);
+.featureItem {
+  background-color: #1B263B;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: normal;
 }
 
-.pricingCards {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
+.featureItem h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.pricingCard {
-  max-width: 300px;
-  padding: 1rem;
-  background-color: var(--secondary-background-color);
-  color: var(--foreground-color);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.footer {
+  background-color: #1B263B;
+  padding: 20px;
   text-align: center;
 }
 
-.pricingCard button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--primary-color);
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.pricingCard button:hover {
-  background-color: #005bb5;
+.footer p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
 }

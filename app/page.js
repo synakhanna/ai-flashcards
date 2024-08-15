@@ -1,60 +1,99 @@
-//Landing Page
+"use client";  // This makes the component a Client Component
 
 import styles from "./page.module.css";
+import Link from 'next/link';
+import FlashOnIcon from '@mui/icons-material/FlashOn';
 
-export default function Home() {
+function Page() {
+  const handleLearnMoreClick = (e) => {
+    e.preventDefault();
+    const targetPosition = document.querySelector('#learn-more').offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 2000; // Increased duration for slower scroll (2 seconds)
+    let start = null;
+
+    window.requestAnimationFrame(function step(timestamp) {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+      const currentScroll = easeInOutQuad(progress, startPosition, distance, duration);
+      window.scrollTo(0, currentScroll);
+      if (progress < duration) {
+        window.requestAnimationFrame(step);
+      }
+    });
+  };
+
+  // Easing function for smooth scroll
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
   return (
     <main className={styles.main}>
+      {/* Header Section */}
+      <header className={styles.header}>
+        <div className={styles.logoContainer}>
+        <FlashOnIcon style={{ fontSize: 80 }} />        </div>
+        <div className={styles.signInContainer}>
+          <Link href="/signin" className={styles.signInButton}>
+            Sign In
+          </Link>
+        </div>
+      </header>
+
+      {/* Hero Section */}
       <section className={styles.hero}>
         <div className="container">
-          <h1>Code Flash</h1>
-          <p>Strengthen your coding skills, one flashcard at a time.</p>
+          <h1 className={styles.title}>CodeFlash</h1>
+          <p className={styles.subtitle}>The AI generated flashcards you need to learn coding.</p>
+          <button className={styles.ctaButton}>Start your FREE trial!</button>
         </div>
       </section>
-      <section id="features" className={styles.features}>
-        <div className="container">
-          <h2>Features</h2>
-          <div className={styles.featureCards}>
-            <div className={styles.card}>
-              <h3>Interactive Flashcards</h3>
-              <p>Easily memorize coding concepts with our interactive flashcards.</p>
-            </div>
-            <div className={styles.card}>
-              <h3>Multi-language Support</h3>
-              <p>Prepare for interviews in Java, JavaScript, Python, and more.</p>
-            </div>
-            <div className={styles.card}>
-              <h3>Customizable Decks</h3>
-              <p>Tailor your learning experience by creating custom flashcard decks.</p>
-            </div>
+
+      {/* Learn More Section */}
+      <section className={styles.learnMore}>
+        <Link href="#learn-more" className={styles.learnMoreLink}>
+          <span onClick={handleLearnMoreClick}>
+            Learn More
+          </span>
+        </Link>
+      </section>
+
+      {/* Features Section */}
+      <section id="learn-more" className={styles.features}>
+        <div className={styles.featureGrid}>
+          <div className={styles.featureItem}>
+            <h3>How it Works</h3>
+            <p>CodeFlash utilizes the power of Artificial Intelligence to generate flashcards with questions and answers for various coding and programming languages.</p>
+          </div>
+          <div className={styles.featureItem}>
+            <h3>Why CodeFlash</h3>
+            <p>CodeFlash helps users to gain coding and programming skills. This helps users prep for exams and interviews.</p>
+          </div>
+          <div className={styles.featureItem}>
+            <h3>Languages</h3>
+            <p>HTML, CSS, Python, JavaScript, Java, C, C++, SQL</p>
+          </div>
+          <div className={styles.featureItem}>
+            <h3>Pricing</h3>
+            <p>ONLY $10 / Month</p>
           </div>
         </div>
-      </section>
-      <section id="pricing" className={styles.pricing}>
-        <div className="container">
-          <h2>Pricing Options</h2>
-          <div className={styles.pricingCards}>
-            <div className={styles.pricingCard}>
-              <h3>Free</h3>
-              <p>$0 / month</p>
-              <p>Basic flashcard features</p>
-              <button>Get Started</button>
-            </div>
-            <div className={styles.pricingCard}>
-              <h3>Pro</h3>
-              <p>$10 / month</p>
-              <p>All basic features plus advanced analytics</p>
-              <button>Get Started</button>
-            </div>
-            <div className={styles.pricingCard}>
-              <h3>Enterprise</h3>
-              <p>Custom Pricing</p>
-              <p>Tailored solutions for teams</p>
-              <button>Contact Us</button>
-            </div>
-          </div>
+        <div className={styles.ctaContainer}>
+          <button className={styles.ctaButton}>Try our program for FREE for 1 week!</button>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <footer className={styles.footer}>
+        <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>
+      </footer>
     </main>
   );
 }
+
+export default Page;
