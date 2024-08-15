@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes the full height of the viewport */
+  background: linear-gradient(#070421, #1B1287); /* Applies the background gradient to the full container */
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(#070421, #1B1287);
+  color: white;
+  font-family: 'Fira Code', monospace;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 3rem;
+  margin-left: 10px;
+  color: #FFFFFF;
+}
+
+.subTitle {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.submitButton {
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.submitButton:hover {
+  background-color: #333;
+}
+
+.signUpText {
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.googleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Fira Code', monospace;
+}
+
+.googleIcon {
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  .logoText {
+    font-size: 2rem;
+  }
+
+  .subTitle {
+    font-size: 1.5rem;
+  }
+
+  .formContainer {
+    width: 90%;
+  }
+}
