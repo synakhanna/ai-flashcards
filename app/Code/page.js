@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './code.module.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import FlashCardMenu from '../components/FlashCardMenu';
-import FlashCardNav from '../components/FlashCardNav';
+import FlashCardMenu from '../components/flashCardMenu';
+import FlashCardNav from '../components/flashCardNav';
 
 export default function Home() {
   return (
