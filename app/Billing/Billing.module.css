@@ -3,8 +3,8 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the page takes full height of the viewport */
-  background: linear-gradient(#070421, #1B1287); /* Background gradient fills the page */
+  min-height: 100vh;
+  background: linear-gradient(#070421, #1B1287);
   font-family: 'Fira Code', monospace;
 }
 
@@ -13,9 +13,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  margin-right: 30px;
-  margin-left: 30px;
-  padding-bottom: 0;
+  margin: 0 30px;
 }
 
 .contentWrapper {
@@ -26,7 +24,6 @@
   justify-content: center;
   padding: 20px;
   color: white;
-  font-family: 'Fira Code', monospace;
 }
 
 .logo {
@@ -40,11 +37,6 @@
   margin-right: 10px;
 }
 
-.homeContainer {
-  display: flex;
-  align-items: center
-}
-
 .homeButton {
   background-color: transparent;
   border: 2px solid #FFFFFF;
@@ -55,7 +47,6 @@
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Fira Code', monospace;
   transition: background-color 0.3s ease;
 }
 
@@ -86,7 +77,7 @@
   max-width: 400px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-bottom: 40px;
+  box-sizing: border-box; /* Ensures padding is inside the width */
 }
 
 .formTitle {
@@ -98,45 +89,48 @@
 .form {
   display: flex;
   flex-direction: column;
-}
-
-.text {
-  font-size: 0.9rem;
-  color: #1B1287;
+  width: 100%;
 }
 
 .input {
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 12px;
+  margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  width: 100%; /* Ensures input fields don't overflow */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .inputGroup {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
+  width: 100%; /* Ensures the input group fits within the container */
+  box-sizing: border-box;
 }
 
 .inputSmall {
-  width: 48%;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 12px;
+  margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .payButton {
-  padding: 10px;
+  padding: 14px;
   background-color: #1B1287;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Prevent overflow due to padding */
 }
 
 .payButton:hover {
@@ -147,6 +141,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
+}
+
+.lockAndText p {
+  margin-left: 10px;
+  color: #1B1287;
+  font-size: 0.9rem;
 }
 
 .unsubscribeButton {
@@ -161,16 +162,16 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  font-family: 'Fira Code', monospace;
-  transition: all 0.3s ease;
   margin-top: 40px;
   margin-bottom: 60px;
+  width: auto; /* Change from 100% to auto */
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .unsubscribeButton:hover {
   background-color: red;
   color: white;
-  font-size: 1.1rem;
 }
 
 .footer {
@@ -183,6 +184,65 @@
   margin: 0;
   color: white;
   font-size: 18px;
-  font-weight: normal;
-  font-family: 'Fira Code', monospace;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .homeButton {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .formContainer {
+    padding: 20px;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inputSmall {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .unsubscribeButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .subTitle {
+    font-size: 1.5rem;
+  }
+
+  .formContainer {
+    max-width: 320px;
+    padding: 15px;
+  }
+
+  .homeButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+  }
+
+  .inputSmall,
+  .input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .formWrapper {
+    padding: 10px;
+  }
 }
