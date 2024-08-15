@@ -53,26 +53,24 @@ function Page() {
         <div className="container">
           <h1 className={styles.title}>CodeFlash</h1>
           <p className={styles.subtitle}>The AI generated flashcards you need to learn coding.</p>
+          <Link href="/signup">
           <button className={styles.ctaButton}>Start your FREE trial!</button>
+          </Link>
         </div>
       </section>
 
       {/* Learn More Section */}
       <section className={styles.learnMore}>
         <Link href="#learn-more" className={styles.learnMoreLink}>
-          <span onClick={handleLearnMoreClick}>
-            Learn More
-          <FontAwesomeIcon icon={faChevronDown} />
-          </span>
+          <span onClick={handleLearnMoreClick}>Learn More</span><br /><br />
+          <FontAwesomeIcon onClick={handleLearnMoreClick} icon={faChevronDown} />
         </Link>
       </section>
 
        {/* Scroll Up */}
        <section className={styles.learnMore}>
         <Link href="#landing" className={styles.learnMoreLink}>
-          <span onClick={handleLearnMoreClick}>
-          <FontAwesomeIcon icon={faChevronUp} />
-          </span>
+          <FontAwesomeIcon onClick={handleLearnMoreClick}icon={faChevronUp} />
         </Link>
       </section>
 
@@ -97,7 +95,9 @@ function Page() {
           </div>
         </div>
         <div className={styles.ctaContainer}>
-          <button className={styles.ctaButton}>Try our program for FREE for 1 week!</button>
+        <Link href="/signup">
+          <button className={styles.ctaButton}>Start your FREE trial!</button>
+        </Link>
         </div>
       </section>
 
