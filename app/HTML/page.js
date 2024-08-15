@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './home.module.css';
+import styles from './code.module.css';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import Link from 'next/link';
 
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         </header>
         <nav className={styles.nav}>
-          <a href="/HTML" className={styles.navItem}>HTML</a>
+          <a href="/HTML" className={`${styles.navItem} ${styles.selectedItem}`}>HTML</a>
           <a href="/CSS" className={styles.navItem}>CSS</a>
           <a href="/Python" className={styles.navItem}>Python</a>
           <a href="/JavaScript" className={styles.navItem}>JavaScript</a>
@@ -40,11 +40,18 @@ export default function Home() {
           <a href="/SQL" className={styles.navItem}>SQL</a>
         </nav>
 
-      {/* Welcome Section */}
-      <section className={styles.welcomeSection}>
-        <h2 className={styles.welcomeMessage}>Hi, Name. Which subject do you need help in today?</h2>
-      </section>
-
+        <main className={styles.main}>
+        <div className={styles.flashcard}>
+          <div className={styles.cardContent}>Flashcard</div>
+        </div>
+        <div className={styles.controls}>
+          <button className={styles.controlButton}>Flip</button>
+          <button className={styles.controlButton}>Next</button>
+          <button className={styles.controlButton}>Back</button>
+          <button className={styles.controlButton}>Save</button>
+        </div>
+      </main>
+      
       {/* Footer Section */}
       <footer className={styles.footer}>
         <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>

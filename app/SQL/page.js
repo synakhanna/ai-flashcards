@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './home.module.css';
+import styles from './code.module.css';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import Link from 'next/link';
 
@@ -37,14 +37,21 @@ export default function Home() {
           <a href="/Java" className={styles.navItem}>Java</a>
           <a href="/C" className={styles.navItem}>C</a>
           <a href="/CPlusPlus" className={styles.navItem}>C++</a>
-          <a href="/SQL" className={styles.navItem}>SQL</a>
+          <a href="/SQL" className={`${styles.navItem} ${styles.selectedItem}`}>SQL</a>
         </nav>
 
-      {/* Welcome Section */}
-      <section className={styles.welcomeSection}>
-        <h2 className={styles.welcomeMessage}>Hi, Name. Which subject do you need help in today?</h2>
-      </section>
-
+        <main className={styles.main}>
+        <div className={styles.flashcard}>
+          <div className={styles.cardContent}>Flashcard</div>
+        </div>
+        <div className={styles.controls}>
+          <button className={styles.controlButton}>Flip</button>
+          <button className={styles.controlButton}>Next</button>
+          <button className={styles.controlButton}>Back</button>
+          <button className={styles.controlButton}>Save</button>
+        </div>
+      </main>
+      
       {/* Footer Section */}
       <footer className={styles.footer}>
         <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>
