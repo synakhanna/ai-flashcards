@@ -9,10 +9,12 @@ export default function Home() {
     <div className={styles.container}>
    {/* Header Section */}
       <header className={styles.header}>
-        <div className={styles.logo}>
-        <FlashOnIcon className={styles.logoImage} />
-        <h1 className={styles.title}>CodeFlash</h1>
-        </div>
+          <Link href="/Home">
+            <div className={styles.logo}>
+              <FlashOnIcon className={styles.logoImage} />
+              <h1 className={styles.title}>CodeFlash</h1>
+            </div>
+          </Link>
         <div className={styles.actions}>
         <SettingsIcon style={{ fontSize: 40 , marginRight: '10px'}}/>
           <Link href="/SignIn">

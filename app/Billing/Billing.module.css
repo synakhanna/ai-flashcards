@@ -5,6 +5,59 @@
   flex-direction: column;
   min-height: 100vh; /* Ensures the page takes full height of the viewport */
   background: linear-gradient(#070421, #1B1287); /* Background gradient fills the page */
+  font-family: 'Fira Code', monospace;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding-bottom: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.homeContainer {
+  display: flex;
+  align-items: center
+}
+
+.homeButton {
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Fira Code', monospace;
+  transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #FFFFFF;
+  color: #1B1287;
 }
 
 .contentWrapper {
@@ -18,26 +71,7 @@
   font-family: 'Fira Code', monospace;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.logoContainer {
-  display: flex;
-  align-items: center;
-}
-
-.logoText {
-  font-size: 3rem;
-  margin-left: 10px;
-  color: #FFFFFF;
-}
-
 .subTitle {
-  margin-top: 20px;
   font-size: 2rem;
   text-align: center;
 }
@@ -59,10 +93,12 @@
   max-width: 400px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .formTitle {
   margin-bottom: 20px;
+  color: #1B1287;
   font-size: 1.5rem;
 }
 
@@ -102,39 +138,29 @@
   font-size: 1rem;
   cursor: pointer;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.payButton:hover {
+  background-color: rgb(71, 148, 237);
 }
 
 .securedByStripe {
-  margin-top: 10px;
   font-size: 0.9rem;
-  color: #2d3436;
+  color: #1B1287;
+
 }
 
 .footer {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
   text-align: center;
-  width: 100%;
+}
+
+.footer p {
+  margin: 0;
   color: white;
   font-size: 18px;
   font-weight: normal;
-  margin-top: auto; /* Pushes the footer to the bottom */
-}
-
-@media (max-width: 600px) {
-  .logoText {
-    font-size: 2rem;
-  }
-
-  .subTitle {
-    font-size: 1.5rem;
-  }
-
-  .formContainer {
-    width: 90%;
-  }
-
-  .inputSmall {
-    width: 100%;
-  }
+  font-family: 'Fira Code', monospace;
 }

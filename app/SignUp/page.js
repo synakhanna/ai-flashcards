@@ -8,10 +8,12 @@ function SignIn() {
     <div className={styles.pageContainer}>
       {/* Header Section */}
       <header className={styles.header}>
-        <div className={styles.logo}>
-        <FlashOnIcon className={styles.logoImage} />
-        <h1 className={styles.title}>CodeFlash</h1>
-        </div>
+          <Link href="/">
+            <div className={styles.logo}>
+              <FlashOnIcon className={styles.logoImage} />
+              <h1 className={styles.title}>CodeFlash</h1>
+            </div>
+          </Link>
           <Link href="/">
             <button className={styles.aboutButton}>About</button>
           </Link>
