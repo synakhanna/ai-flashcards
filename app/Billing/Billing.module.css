@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page takes full height of the viewport */
+  background: linear-gradient(#070421, #1B1287); /* Background gradient fills the page */
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  font-family: 'Fira Code', monospace;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 3rem;
+  margin-left: 10px;
+  color: #FFFFFF;
+}
+
+.subTitle {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.formTitle {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputSmall {
+  width: 48%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.payButton {
+  padding: 10px;
+  background-color: #1B1287;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.securedByStripe {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #2d3436;
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+@media (max-width: 600px) {
+  .logoText {
+    font-size: 2rem;
+  }
+
+  .subTitle {
+    font-size: 1.5rem;
+  }
+
+  .formContainer {
+    width: 90%;
+  }
+
+  .inputSmall {
+    width: 100%;
+  }
+}
