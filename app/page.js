@@ -3,6 +3,9 @@
 import styles from "./page.module.css";
 import Link from 'next/link';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Page() {
   const handleLearnMoreClick = (e) => {
@@ -35,7 +38,7 @@ function Page() {
   return (
     <main className={styles.main}>
       {/* Header Section */}
-      <header className={styles.header}>
+      <header id='#landing' className={styles.header}>
         <div className={styles.logoContainer}>
         <FlashOnIcon style={{ fontSize: 80 }} />        </div>
         <div className={styles.signInContainer}>
@@ -59,6 +62,16 @@ function Page() {
         <Link href="#learn-more" className={styles.learnMoreLink}>
           <span onClick={handleLearnMoreClick}>
             Learn More
+          <FontAwesomeIcon icon={faChevronDown} />
+          </span>
+        </Link>
+      </section>
+
+       {/* Scroll Up */}
+       <section className={styles.learnMore}>
+        <Link href="#landing" className={styles.learnMoreLink}>
+          <span onClick={handleLearnMoreClick}>
+          <FontAwesomeIcon icon={faChevronUp} />
           </span>
         </Link>
       </section>

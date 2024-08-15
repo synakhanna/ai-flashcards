@@ -94,8 +94,7 @@
   margin-bottom: 0px;
 }
 
-.learnMoreLink::after {
-  content: '⌄';
+.learnMoreLink:after {
   display: block;
   font-size: 50px;
 }
