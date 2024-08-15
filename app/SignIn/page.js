@@ -17,8 +17,8 @@ function SignIn() {
           <div className={styles.formContainer}>
             <form className={styles.form}>
               <input
-                type="text"
-                placeholder="Username"
+                type="email"
+                placeholder="Email Address"
                 className={styles.input}
                 required
               />
@@ -31,13 +31,13 @@ function SignIn() {
               <button type="submit" className={styles.submitButton}>
                 Log In
               </button>
-              <p className={styles.signUpText}>
-              <a href="/SignUp">Don’t have an account? Sign up!</a>
-              </p>
               <button type="button" className={styles.googleButton}>
                 <FcGoogle className={styles.googleIcon} size={20} />
                 Sign in with Google
               </button>
+              <p className={styles.signUpText}>
+              <a href="/SignUp">Don’t have an account? Sign up!</a>
+              </p>
             </form>
           </div>
         </div>
