@@ -58,7 +58,9 @@ function Page() {
       {/* Header Section */}
       <header className={styles.header}>
         <div className={styles.logoContainer}>
-        <FlashOnIcon style={{ fontSize: 80 }} />
+          <Link href="/">
+          <FlashOnIcon style={{ fontSize: 80 }} />
+          </Link>
         </div>
         <div className={styles.signInContainer}>
           <Link href="/SignIn" className={styles.signInButton}>
