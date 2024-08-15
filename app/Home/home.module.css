@@ -8,6 +8,7 @@
   .header {
     display: flex;
     justify-content: space-between;
+    margin: 15px;
     align-items: center;
     padding: 20px;
   }
@@ -30,13 +31,13 @@
   
   .nav {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    margin: 50px;
   }
   
   .navItem {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
-    text-decoration: none;
     color: #FFFFFF;
     transition: transform 0.3s ease-in-out;
   }
@@ -48,11 +49,6 @@
   .actions {
     display: flex;
     gap: 15px;
-  }
-  
-  .settingsButton img {
-    width: 30px;
-    height: 30px;
   }
   
   .logoutButton {
@@ -70,17 +66,36 @@
   
   .logoutButton:hover {
     background-color: #E0E0E0;
+    font-size: 20px;
   }
   
   .welcomeSection {
-    margin-top: 50px;
     text-align: center;
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
   }
   
   .welcomeMessage {
     background-color: #1E3A8A;
-    padding: 20px;
-    font-size: 32px;
+    padding: 50px;
+    font-size: 35px;
     border-radius: 10px;
   }
   
+  .footer {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+  }
