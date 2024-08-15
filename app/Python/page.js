@@ -15,7 +15,7 @@ export default function Home() {
             </div>
           </Link>
         <div className={styles.actions}>
-          <Link href="/MyAccount">
+          <Link href="/Saved">
             <button className={styles.logoutButton}>Saved</button>
           </Link>
           <Link href="/MyAccount">

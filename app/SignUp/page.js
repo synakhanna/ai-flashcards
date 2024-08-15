@@ -25,7 +25,13 @@ function SignIn() {
             <form className={styles.form}>
             <input
                 type="text"
-                placeholder="Full Name"
+                placeholder="First Name"
+                className={styles.input}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
                 className={styles.input}
                 required
               />

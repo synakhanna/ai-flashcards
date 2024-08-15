@@ -66,87 +66,51 @@
   text-align: center;
 }
 
-.formWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 60px;
-}
-
-.formContainer {
+.infoContainer {
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
   border-radius: 10px;
+  margin-top: 30px;
   padding: 30px;
   width: 100%;
   max-width: 400px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  text-align: left;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.submitButton {
-  padding: 10px;
-  background-color: #1B1287;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 15px;
-  transition: all 0.3s ease;
-}
-
-.submitButton:hover {
-  background-color: rgb(71, 148, 237);
-}
-
-.signUpText {
+.infoText {
   margin-top: 30px;
-  font-size: 15px;
-  color: #1B1287;
-  transition: all 0.3s ease-in-out;
-}
-
-.signUpText:hover {
   font-size: 20px;
+  padding-left: 10px;
+  color: #1B1287;
+  background-color: rgb(71, 148, 237, 0.5);
+  font-weight: bold;
 }
 
-.googleButton {
+.deleteButton {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-color: #1B1287;
-  color: white;
+  background-color: white;
+  color: #1B1287;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  font-family: 'Fira Code', monospace;
   transition: all 0.3s ease;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
 
-.googleButton:hover {
-  background-color: rgb(71, 148, 237);
+.deleteButton:hover {
+  background-color: red;
+  color: white;
+  font-size: 1.1rem;
 }
 
-.googleIcon {
-  margin-right: 10px;
-}
 
 .footer {
   background-color: rgba(255, 255, 255, 0.3);

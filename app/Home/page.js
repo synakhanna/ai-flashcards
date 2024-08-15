@@ -15,7 +15,7 @@ export default function Home() {
             </div>
           </Link>
         <div className={styles.actions}>
-          <Link href="/MyAccount">
+          <Link href="/Saved">
             <button className={styles.logoutButton}>Saved</button>
           </Link>
           <Link href="/MyAccount">
@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* Welcome Section */}
       <section className={styles.welcomeSection}>
-        <h2 className={styles.welcomeMessage}>Hi, Name. Which subject do you need help in today?</h2>
+        <h2 className={styles.welcomeMessage}>Hi, First Name. Which subject do you need help in today?</h2>
       </section>
 
       {/* Footer Section */}
