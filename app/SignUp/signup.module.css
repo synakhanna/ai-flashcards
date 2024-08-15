@@ -148,20 +148,6 @@
   margin-right: 10px;
 }
 
-.footer {
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 20px;
-  text-align: center;
-}
-
-.footer p {
-  margin: 0;
-  color: white;
-  font-size: 18px;
-  font-weight: normal;
-  font-family: 'Fira Code', monospace;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .header {

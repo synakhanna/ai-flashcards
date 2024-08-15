@@ -1,22 +1,23 @@
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import styles from './myaccount.module.css';
 import Link from 'next/link';
+import Footer from '../components/footer';
 
 function SignIn() {
   return (
-    <div className={styles.pageContainer}>
+    <><div className={styles.pageContainer}>
       {/* Header Section */}
       <header className={styles.header}>
-          <Link href="/Home">
-            <div className={styles.logo}>
-              <FlashOnIcon className={styles.logoImage} />
-              <h1 className={styles.title}>CodeFlash</h1>
-            </div>
-          </Link>
-          <Link href="/Home">
-            <button className={styles.aboutButton}>Home</button>
-          </Link>
-        </header>
+        <Link href="/Home">
+          <div className={styles.logo}>
+            <FlashOnIcon className={styles.logoImage} />
+            <h1 className={styles.title}>CodeFlash</h1>
+          </div>
+        </Link>
+        <Link href="/Home">
+          <button className={styles.aboutButton}>Home</button>
+        </Link>
+      </header>
       <div className={styles.contentWrapper}>
         <div className={styles.tableContainer}>
           <table>
@@ -44,15 +45,11 @@ function SignIn() {
               </tr>
             </tbody>
           </table>
-        </div>   
+        </div>
         <button type="button" className={styles.deleteButton}>Delete My Account</button>
       </div>
-       {/* Footer Section */}
-       <footer className={styles.footer}>
-          <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>
-        </footer>
-    </div>
-  );
+    </div><Footer /></>
+  )
 }
 
 export default SignIn;
