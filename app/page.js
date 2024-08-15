@@ -35,6 +35,23 @@ function Page() {
     return -c / 2 * (t * (t - 2) - 1) + b;
   }
 
+  const smoothScrollToTop = (scrollDuration) => {
+    const scrollHeight = window.scrollY;
+    const scrollStep = Math.PI / (scrollDuration / 15);
+    const cosParameter = scrollHeight / 2;
+    let scrollCount = 0;
+    let scrollMargin;
+  
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        scrollCount = scrollCount + 1;  
+        scrollMargin = cosParameter - cosParameter * Math.cos(scrollCount * scrollStep);
+        window.scrollTo(0, (scrollHeight - scrollMargin));
+      } 
+      else clearInterval(scrollInterval); 
+    }, 15);
+  }
+
   return (
     <main className={styles.main}>
       {/* Header Section */}
@@ -70,10 +87,17 @@ function Page() {
 
        {/* Scroll Up */}
        <section className={styles.learnMore}>
-        <Link href="/" className={styles.learnMoreLink}>
-          <FontAwesomeIcon icon={faChevronUp} />
-        </Link>
-      </section>
+          <a
+            href="#"
+            className={styles.learnMoreLink}
+            onClick={(e) => {
+              e.preventDefault();
+              smoothScrollToTop(2000); // 1000ms = 1s
+            }}
+          >
+            <FontAwesomeIcon icon={faChevronUp} />
+          </a>
+        </section>
 
       {/* Features Section */}
       <section id="learn-more" className={styles.features}>
