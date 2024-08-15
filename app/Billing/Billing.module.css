@@ -167,9 +167,11 @@
   width: auto; 
   padding-left: 30px;
   padding-right: 30px;
+  transition: all 0.3s ease;
 }
 
 .unsubscribeButton:hover {
+  font-size: 1.5rem;
   background-color: red;
   color: white;
 }
