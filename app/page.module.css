@@ -140,21 +140,52 @@
   font-size: 18px;
   font-weight: normal;
 }
+@media (max-width: 1200px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
 
-/* For screens up to 768px (tablet and smaller devices) */
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+
+  .subtitle {
+    font-size: 40px;
+    margin: 50px 25px;
+  }
+
+  .ctaButton {
+    padding: 10px 80px;
+    font-size: 18px;
+  }
+
+  .ctaButton:hover {
+    font-size: 22px;
+  }
+
+  .learnMore {
+    font-size: 50px;
+  }
+
+  .learnMoreLink {
+    font-size: 25px;
+  }
+
+  .featureItem h3 {
+    font-size: 35px;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
-  }
-
-  .logoContainer {
-    margin-top: 10px;
-  }
-
-  .signInButton {
-    padding: 8px 16px;
   }
 
   .hero {
@@ -167,28 +198,14 @@
 
   .subtitle {
     font-size: 30px;
-    margin: 40px 15px;
   }
 
   .ctaButton {
     padding: 10px 50px;
-    font-size: 16px;
-  }
-
-  .ctaButton:hover {
-    font-size: 20px;
-  }
-
-  .ctaContainer {
-    margin-top: 20px;
   }
 
   .learnMore {
     font-size: 40px;
-  }
-
-  .learnMoreLink {
-    font-size: 20px;
   }
 
   .featureGrid {
@@ -199,26 +216,11 @@
   .featureItem h3 {
     font-size: 30px;
   }
-
-  .footer p {
-    font-size: 16px;
-  }
 }
-
-/* For screens up to 480px (mobile devices) */
 @media (max-width: 480px) {
   .header {
     margin-left: 5px;
     margin-right: 5px;
-  }
-
-  .logoContainer {
-    margin-top: 5px;
-  }
-
-  .signInButton {
-    padding: 6px 12px;
-    font-size: 14px;
   }
 
   .hero {
@@ -231,7 +233,6 @@
 
   .subtitle {
     font-size: 20px;
-    margin: 20px 10px;
   }
 
   .ctaButton {
@@ -239,20 +240,8 @@
     font-size: 14px;
   }
 
-  .ctaButton:hover {
-    font-size: 16px;
-  }
-
-  .ctaContainer {
-    margin-top: 10px;
-  }
-
   .learnMore {
     font-size: 30px;
-  }
-
-  .learnMoreLink {
-    font-size: 16px;
   }
 
   .featureGrid {
