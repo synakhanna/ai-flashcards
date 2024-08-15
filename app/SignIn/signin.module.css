@@ -157,17 +157,3 @@
   font-weight: normal;
   font-family: 'Fira Code', monospace;
 }
-
-@media (max-width: 600px) {
-  .logoText {
-    font-size: 2rem;
-  }
-
-  .subTitle {
-    font-size: 1.5rem;
-  }
-
-  .formContainer {
-    width: 90%;
-  }
-}
