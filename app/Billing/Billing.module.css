@@ -8,7 +8,6 @@
   font-family: 'Fira Code', monospace;
 }
 
-
 .header {
   display: flex;
   align-items: center;
@@ -20,9 +19,14 @@
 }
 
 .contentWrapper {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding: 20px;
+  color: white;
+  font-family: 'Fira Code', monospace;
 }
 
 .logo {
@@ -60,17 +64,6 @@
   color: #1B1287;
 }
 
-.contentWrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  color: white;
-  font-family: 'Fira Code', monospace;
-}
-
 .subTitle {
   font-size: 2rem;
   text-align: center;
@@ -105,6 +98,11 @@
 .form {
   display: flex;
   flex-direction: column;
+}
+
+.text {
+  font-size: 0.9rem;
+  color: #1B1287;
 }
 
 .input {
@@ -145,10 +143,34 @@
   background-color: rgb(71, 148, 237);
 }
 
-.securedByStripe {
-  font-size: 0.9rem;
-  color: #1B1287;
+.lockAndText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.unsubscribeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  color: #1B1287;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Fira Code', monospace;
+  transition: all 0.3s ease;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.unsubscribeButton:hover {
+  background-color: red;
+  color: white;
+  font-size: 1.1rem;
 }
 
 .footer {

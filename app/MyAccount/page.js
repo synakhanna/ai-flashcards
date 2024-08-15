@@ -35,11 +35,11 @@ function SignIn() {
                 <td>Example</td>
               </tr>
               <tr>
-                <th>Data Joined</th>
+                <th>Member Since</th>
                 <td>Example</td>
               </tr>
               <tr>
-                <th>Subscription End Date</th>
+                <th>Subscription Paid</th>
                 <td>Example</td>
               </tr>
             </tbody>

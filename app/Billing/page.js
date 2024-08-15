@@ -1,6 +1,7 @@
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import styles from './Billing.module.css'; // Assuming the correct CSS file is used
 import Link from 'next/link';
+import LockIcon from '@mui/icons-material/Lock';
 
 function Billing() {
   return (
@@ -22,6 +23,7 @@ function Billing() {
         <div className={styles.formWrapper}>
           <div className={styles.formContainer}>
             <h3 className={styles.formTitle}>Enter Your Payment Information</h3>
+            <p className={styles.text}>$10/Month</p>
             <form className={styles.form}>
               <input
                 type="email"
@@ -66,12 +68,14 @@ function Billing() {
               <button type="submit" className={styles.payButton}>
                 Pay
               </button>
-              <p className={styles.securedByStripe}>
-                <span role="img" aria-label="lock">🔒</span> Payment secured by Stripe
-              </p>
+              <div className={styles.lockAndText}>
+                <span role="img" aria-label="lock" style={{marginRight: '10px'}}><LockIcon /></span>
+                <p className={styles.text}>Payment secured by Stripe</p>
+              </div>
             </form>
           </div>
         </div>
+        <button type="button" className={styles.unsubscribeButton}>Stop My Subscription</button>
       </div>
        {/* Footer Section */}
        <footer className={styles.footer}>
