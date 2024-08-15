@@ -42,7 +42,7 @@ function Page() {
         <div className={styles.logoContainer}>
         <FlashOnIcon style={{ fontSize: 80 }} />        </div>
         <div className={styles.signInContainer}>
-          <Link href="/signin" className={styles.signInButton}>
+          <Link href="/SignIn" className={styles.signInButton}>
             Sign In
           </Link>
         </div>
@@ -53,7 +53,7 @@ function Page() {
         <div className="container">
           <h1 className={styles.title}>CodeFlash</h1>
           <p className={styles.subtitle}>The AI generated flashcards you need to learn coding.</p>
-          <Link href="/signup">
+          <Link href="/SignUp">
           <button className={styles.ctaButton}>Start your FREE trial!</button>
           </Link>
         </div>
@@ -95,7 +95,7 @@ function Page() {
           </div>
         </div>
         <div className={styles.ctaContainer}>
-        <Link href="/signup">
+        <Link href="/SignUp">
           <button className={styles.ctaButton}>Try our program for FREE for 1 week!</button>
         </Link>
         </div>
