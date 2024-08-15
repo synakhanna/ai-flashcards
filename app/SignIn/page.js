@@ -32,7 +32,7 @@ function SignIn() {
                 Log In
               </button>
               <p className={styles.signUpText}>
-                Don’t have an account? <a href="#">Sign up!</a>
+              <a href="/SignUp">Don’t have an account? Sign up!</a>
               </p>
               <button type="button" className={styles.googleButton}>
                 <FcGoogle className={styles.googleIcon} size={20} />
@@ -42,6 +42,7 @@ function SignIn() {
           </div>
         </div>
       </div>
+      {/* Footer Section */}
       <footer className={styles.footer}>
         <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>
       </footer>
