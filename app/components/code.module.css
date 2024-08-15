@@ -1,0 +1,133 @@
+.container {
+  background: linear-gradient(to bottom, #070421, #1B1287);
+  color: #FFFFFF;
+  font-family: 'Fira Code', monospace;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  margin-bottom:0;
+}
+
+.navItem {
+  font-size: 25px;
+  font-weight: bold;
+  color: #FFFFFF;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navItem:hover {
+  transform: scale(1.1);
+}
+
+.selectedItem {
+  color: rgb(71, 148, 237);
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.logoutButton {
+background-color: transparent;
+border: 2px solid #FFFFFF;
+color: #FFFFFF;
+padding: 10px 20px;
+text-decoration: none;
+font-size: 16px;
+font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+font-family: 'Fira Code', monospace;
+}
+
+.logoutButton:hover {
+  background-color: #FFFFFF;
+  color: #1B1287;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 100px 0;
+}
+
+.flashcard {
+  width: 525px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #1B1287;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.controlButton {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: #1B1287;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controlButton:hover {
+  background-color: rgb(71, 148, 237);
+  color: white;
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+}
