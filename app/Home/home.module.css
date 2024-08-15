@@ -52,21 +52,21 @@
   }
   
   .logoutButton {
-    background-color: #F2F2F2;
-    color: #0D1B2A;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: 'Fira Code', monospace;
-    transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family: 'Fira Code', monospace;
   }
   
   .logoutButton:hover {
-    background-color: #E0E0E0;
-    font-size: 20px;
+    background-color: #FFFFFF;
+    color: #1B1287;
   }
   
   .welcomeSection {

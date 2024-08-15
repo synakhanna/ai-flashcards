@@ -1,17 +1,22 @@
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import { FcGoogle } from 'react-icons/fc';
 import styles from './signin.module.css';
+import Link from 'next/link';
 
 function SignIn() {
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.contentWrapper}>
-        <div className={styles.header}>
-          <div className={styles.logoContainer}>
-            <FlashOnIcon style={{ fontSize: 80, color: '#FFFFFF' }} />
-            <h1 className={styles.logoText}>CodeFlash</h1>
-          </div>
+      {/* Header Section */}
+      <header className={styles.header}>
+        <div className={styles.logo}>
+        <FlashOnIcon className={styles.logoImage} />
+        <h1 className={styles.title}>CodeFlash</h1>
         </div>
+          <Link href="/">
+            <button className={styles.aboutButton}>About</button>
+          </Link>
+        </header>
+      <div className={styles.contentWrapper}>
         <h2 className={styles.subTitle}>Sign Into Your Account</h2>
         <div className={styles.formWrapper}>
           <div className={styles.formContainer}>
@@ -41,11 +46,12 @@ function SignIn() {
             </form>
           </div>
         </div>
+       
       </div>
-      {/* Footer Section */}
-      <footer className={styles.footer}>
-        <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>
-      </footer>
+       {/* Footer Section */}
+       <footer className={styles.footer}>
+          <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>
+        </footer>
     </div>
   );
 }
