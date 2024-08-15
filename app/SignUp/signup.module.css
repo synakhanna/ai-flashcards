@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #141E30, #243B55);
+    color: white;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .flash {
+    color: #FFD700; /* Gold color for the flash icon */
+  }
+  
+  .formContainer {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .submitButton {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .submitButton:hover {
+    background-color: #218838;
+  }
+  
+  .googleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .googleLogo {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  .googleButton:hover {
+    background-color: #f8f9fa;
+  }
+  
+  @media (max-width: 600px) {
+    .logo {
+      font-size: 2rem;
+    }
+  
+    .title {
+      font-size: 1.2rem;
+    }
+  
+    .formContainer {
+      width: 90%;
+    }
+  }
+  
