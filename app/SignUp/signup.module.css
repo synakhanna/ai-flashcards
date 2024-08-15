@@ -84,10 +84,12 @@
   font-size: 1rem;
   cursor: pointer;
   margin-bottom: 10px;
+  font-family: 'Fira Code', monospace;
 }
 
 .submitButton:hover {
-  background-color: #218838;
+  background-color: white;
+  color:#1B1287;
 }
 
 .googleButton {
@@ -96,20 +98,37 @@
   justify-content: center;
   padding: 10px;
   background-color: white;
-  color: black;
+  color: #1B1287;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.googleLogo {
-  width: 20px;
-  margin-right: 10px;
+  font-family: 'Fira Code', monospace;
 }
 
 .googleButton:hover {
-  background-color: #f8f9fa;
+  background-color: #1B1287;
+  color: white;
+}
+
+.googleIcon {
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 @media (max-width: 600px) {
@@ -123,10 +142,6 @@
 
   .formContainer {
     width: 90%;
-  }
-
-  .googleIcon {
-    margin-right: 10px;
   }
   
 }

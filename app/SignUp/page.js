@@ -1,5 +1,5 @@
 import FlashOnIcon from '@mui/icons-material/FlashOn';
-import GoogleIcon from '@mui/icons-material/Google';
+import { FcGoogle } from 'react-icons/fc';
 import styles from './signup.module.css';
 
 export default function SignUpPage() {
@@ -38,12 +38,14 @@ export default function SignUpPage() {
               Sign Up
             </button>
             <button type="button" className={styles.googleButton}>
-              <GoogleIcon className={styles.googleIcon} />
-              Sign up with Google
+              <FcGoogle className={styles.googleIcon}size={20}/>Sign up With Google
             </button>
           </form>
         </div>
       </div>
+      <footer className={styles.footer}>
+        <p>&copy; 2024 CodeFlash. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 }
