@@ -1,101 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom right, #141E30, #243B55);
-    color: white;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#070421, #1B1287);
+  color: white;
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 3rem;
+  margin-left: 10px;
+  color: #FFFFFF;
+}
+
+.subTitle {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #1B1287;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 10px solid white;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #1B1287;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.submitButton {
+  padding: 10px;
+  background-color: #1B1287;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.submitButton:hover {
+  background-color: #218838;
+}
+
+.googleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.googleLogo {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.googleButton:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 600px) {
+  .logoContainer {
+    font-size: 2rem;
   }
-  
-  .logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .flash {
-    color: #FFD700; /* Gold color for the flash icon */
-  }
-  
-  .formContainer {
-    background: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: 20px;
+
+  .subTitle {
     font-size: 1.5rem;
   }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
+
+  .formContainer {
+    width: 90%;
   }
-  
-  .input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-  }
-  
-  .submitButton {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  .submitButton:hover {
-    background-color: #218838;
-  }
-  
-  .googleButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: white;
-    color: black;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .googleLogo {
-    width: 20px;
+
+  .googleIcon {
     margin-right: 10px;
   }
   
-  .googleButton:hover {
-    background-color: #f8f9fa;
-  }
-  
-  @media (max-width: 600px) {
-    .logo {
-      font-size: 2rem;
-    }
-  
-    .title {
-      font-size: 1.2rem;
-    }
-  
-    .formContainer {
-      width: 90%;
-    }
-  }
-  
+}
