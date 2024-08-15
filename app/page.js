@@ -38,7 +38,7 @@ function Page() {
   return (
     <main className={styles.main}>
       {/* Header Section */}
-      <header id='#landing' className={styles.header}>
+      <header className={styles.header}>
         <div className={styles.logoContainer}>
         <FlashOnIcon style={{ fontSize: 80 }} />        </div>
         <div className={styles.signInContainer}>
@@ -62,15 +62,15 @@ function Page() {
       {/* Learn More Section */}
       <section className={styles.learnMore}>
         <Link href="#learn-more" className={styles.learnMoreLink}>
-          <span onClick={handleLearnMoreClick}>Learn More</span><br /><br />
+          <span onClick={handleLearnMoreClick}>Learn More</span><br />
           <FontAwesomeIcon onClick={handleLearnMoreClick} icon={faChevronDown} />
         </Link>
       </section>
 
        {/* Scroll Up */}
        <section className={styles.learnMore}>
-        <Link href="#landing" className={styles.learnMoreLink}>
-          <FontAwesomeIcon onClick={handleLearnMoreClick}icon={faChevronUp} />
+        <Link href="/" className={styles.learnMoreLink}>
+          <FontAwesomeIcon icon={faChevronUp} />
         </Link>
       </section>
 
@@ -96,7 +96,7 @@ function Page() {
         </div>
         <div className={styles.ctaContainer}>
         <Link href="/signup">
-          <button className={styles.ctaButton}>Start your FREE trial!</button>
+          <button className={styles.ctaButton}>Try our program for FREE for 1 week!</button>
         </Link>
         </div>
       </section>
