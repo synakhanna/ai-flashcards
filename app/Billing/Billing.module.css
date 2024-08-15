@@ -77,7 +77,7 @@
   max-width: 400px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  box-sizing: border-box; /* Ensures padding is inside the width */
+  box-sizing: border-box; 
 }
 
 .formTitle {
@@ -98,15 +98,15 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  width: 100%; /* Ensures input fields don't overflow */
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 .inputGroup {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  width: 100%; /* Ensures the input group fits within the container */
+  width: 100%; 
   box-sizing: border-box;
 }
 
@@ -117,7 +117,7 @@
   border: 1px solid #ccc;
   font-size: 1rem;
   width: 100%;
-  box-sizing: border-box; /* Ensure padding is included in width */
+  box-sizing: border-box; 
 }
 
 .payButton {
@@ -130,7 +130,7 @@
   cursor: pointer;
   margin-top: 20px;
   width: 100%;
-  box-sizing: border-box; /* Prevent overflow due to padding */
+  box-sizing: border-box; 
 }
 
 .payButton:hover {
@@ -164,7 +164,7 @@
   cursor: pointer;
   margin-top: 40px;
   margin-bottom: 60px;
-  width: auto; /* Change from 100% to auto */
+  width: auto; 
   padding-left: 30px;
   padding-right: 30px;
 }

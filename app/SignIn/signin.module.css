@@ -6,7 +6,7 @@
   min-height: 100vh;
   background: linear-gradient(#070421, #1B1287);
   font-family: 'Fira Code', monospace;
-  padding: 0 20px; /* Added padding to prevent content from touching the edges on smaller screens */
+  padding: 0 20px;
 }
 
 .header {

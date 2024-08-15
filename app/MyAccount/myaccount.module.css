@@ -6,7 +6,7 @@
   min-height: 100vh;
   background: linear-gradient(#070421, #1B1287);
   font-family: 'Fira Code', monospace;
-  padding: 0 20px; /* Added padding for mobile responsiveness */
+  padding: 0 20px; 
 }
 
 .header {
@@ -60,7 +60,7 @@
   margin: 30px auto;
   width: 100%;
   max-width: 800px;
-  overflow-x: auto; /* Allows horizontal scroll on small screens */
+  overflow-x: auto; 
   border-collapse: collapse;
   font-family: 'Fira Code', monospace;
 }
