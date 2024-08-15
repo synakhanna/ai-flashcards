@@ -18,15 +18,34 @@ function SignIn() {
           </Link>
         </header>
       <div className={styles.contentWrapper}>
-        <h2 className={styles.subTitle}>My Account</h2>
-          <div className={styles.infoContainer}>
-              <p className={styles.infoText}>First Name:</p>
-              <p className={styles.infoText}>Last Name:</p>
-              <p className={styles.infoText}>Email:</p>
-              <p className={styles.infoText}>Date Joined:</p>
-              <p className={styles.infoText}>Subscription Status:</p>
-          </div>       
-          <button type="button" className={styles.deleteButton}>Delete My Account</button>
+        <div className={styles.tableContainer}>
+          <table>
+            <caption>My Account</caption>
+            <tbody>
+              <tr>
+                <th>First Name</th>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <th>Last Name</th>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <th>Data Joined</th>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <th>Subscription End Date</th>
+                <td>Example</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>   
+        <button type="button" className={styles.deleteButton}>Delete My Account</button>
       </div>
        {/* Footer Section */}
        <footer className={styles.footer}>
