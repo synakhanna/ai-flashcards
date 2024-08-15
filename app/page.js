@@ -119,7 +119,7 @@ function Page() {
           </div>
           <div className={styles.featureItem}>
             <h3>Pricing</h3>
-            <p>ONLY $10/Month</p>
+            <p>ONLY $6.99/Month</p>
           </div>
         </div>
         <div className={styles.ctaContainer}>

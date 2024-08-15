@@ -24,7 +24,7 @@ function Billing() {
         <div className={styles.formWrapper}>
           <div className={styles.formContainer}>
             <h3 className={styles.formTitle}>Enter Your Payment Information</h3>
-            <p className={styles.text}>$10/Month</p>
+            <p className={styles.text}>$6.99/Month</p>
             <form className={styles.form}>
               <input
                 type="email"
