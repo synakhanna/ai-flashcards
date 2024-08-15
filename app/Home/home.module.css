@@ -1,0 +1,86 @@
+.container {
+    background: linear-gradient(to bottom, #070421, #1B1287);
+    color: #FFFFFF;
+    font-family: 'Fira Code', monospace;
+    min-height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImage {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navItem {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navItem:hover {
+    transform: scale(1.1);
+  }
+  
+  .actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .settingsButton img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .logoutButton {
+    background-color: #F2F2F2;
+    color: #0D1B2A;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Fira Code', monospace;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logoutButton:hover {
+    background-color: #E0E0E0;
+  }
+  
+  .welcomeSection {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .welcomeMessage {
+    background-color: #1E3A8A;
+    padding: 20px;
+    font-size: 32px;
+    border-radius: 10px;
+  }
+  
