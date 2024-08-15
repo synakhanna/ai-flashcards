@@ -41,8 +41,7 @@ function SignIn() {
                 <FcGoogle className={styles.googleIcon} size={20} />
                 Sign in with Google
               </button>
-              <p className={styles.signUpText}>
-                <a href="/SignUp">Don’t have an account? Sign up!</a>
+              <p >Don’t have an account? <a href="/SignUp" className={styles.signInText}>Sign up!</a>
               </p>
             </form>
           </div>

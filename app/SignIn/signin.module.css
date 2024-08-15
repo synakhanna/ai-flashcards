@@ -109,14 +109,15 @@
   background-color: rgb(71, 148, 237);
 }
 
-.signUpText {
+.signInText {
   margin-top: 30px;
   font-size: 15px;
   color: #1B1287;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 
-.signUpText:hover {
+.signInText:hover {
   font-size: 20px;
 }
 
