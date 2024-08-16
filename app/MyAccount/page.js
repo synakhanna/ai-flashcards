@@ -2,14 +2,12 @@ import FlashOnIcon from '@mui/icons-material/FlashOn';
 import styles from './myaccount.module.css';
 import Link from 'next/link';
 import Footer from '../components/footer';
+import { useUser, UserButton } from '@clerk/nextjs';
 
-function SignIn() {
-  const { user, isLoaded } = useUser();
 
-  if (!isLoaded) {
-    return <div>Loading...</div>;
-  }
+function MyAccount() {
   
+
   return (
     <><div className={styles.pageContainer}>
       {/* Header Section */}
@@ -58,4 +56,4 @@ function SignIn() {
   )
 }
 
-export default SignIn;
+export default MyAccount;
