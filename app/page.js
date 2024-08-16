@@ -1,12 +1,12 @@
-"use client";  // This makes the component a Client Component
+"use client";
 
-import styles from "./page.module.css";
-import Link from 'next/link';
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link';
 import Footer from './components/footer';
+import styles from "./page.module.css";
 
 function Page() {
   const handleLearnMoreClick = (e) => {
@@ -14,7 +14,7 @@ function Page() {
     const targetPosition = document.querySelector('#learn-more').offsetTop;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
-    const duration = 2000; // Increased duration for slower scroll (2 seconds)
+    const duration = 2000;
     let start = null;
 
     window.requestAnimationFrame(function step(timestamp) {
@@ -28,7 +28,6 @@ function Page() {
     });
   };
 
-  // Easing function for smooth scroll
   function easeInOutQuad(t, b, c, d) {
     t /= d / 2;
     if (t < 1) return c / 2 * t * t + b;
@@ -45,7 +44,7 @@ function Page() {
   
     const scrollInterval = setInterval(() => {
       if (window.scrollY !== 0) {
-        scrollCount = scrollCount + 1;  
+        scrollCount += 1;
         scrollMargin = cosParameter - cosParameter * Math.cos(scrollCount * scrollStep);
         window.scrollTo(0, (scrollHeight - scrollMargin));
       } 
@@ -59,13 +58,18 @@ function Page() {
       <header className={styles.header}>
         <div className={styles.logoContainer}>
           <Link href="/">
-          <FlashOnIcon style={{ fontSize: 80 }} />
+            <FlashOnIcon style={{ fontSize: 80 }} />
           </Link>
         </div>
         <div className={styles.signInContainer}>
-          <Link href="/SignIn" className={styles.signInButton}>
-            Sign In
-          </Link>
+          <SignedOut>
+            <SignInButton mode="modal">
+              <button className={styles.signInButton}>Sign In</button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </header>
 
@@ -75,7 +79,7 @@ function Page() {
           <h1 className={styles.title}>CodeFlash</h1>
           <p className={styles.subtitle}>The AI generated flashcards you need to learn coding.</p>
           <Link href="/SignUp">
-          <button className={styles.ctaButton}>Start your FREE trial!</button>
+            <button className={styles.ctaButton}>Start your FREE trial!</button>
           </Link>
         </div>
       </section>
@@ -88,19 +92,19 @@ function Page() {
         </Link>
       </section>
 
-       {/* Scroll Up */}
-       <section className={styles.learnMore}>
-          <a
-            href="#"
-            className={styles.learnMoreLink}
-            onClick={(e) => {
-              e.preventDefault();
-              smoothScrollToTop(2000); // 1000ms = 1s
-            }}
-          >
-            <FontAwesomeIcon icon={faChevronUp} />
-          </a>
-        </section>
+      {/* Scroll Up */}
+      <section className={styles.learnMore}>
+        <a
+          href="#"
+          className={styles.learnMoreLink}
+          onClick={(e) => {
+            e.preventDefault();
+            smoothScrollToTop(2000);
+          }}
+        >
+          <FontAwesomeIcon icon={faChevronUp} />
+        </a>
+      </section>
 
       {/* Features Section */}
       <section id="learn-more" className={styles.features}>
@@ -123,9 +127,9 @@ function Page() {
           </div>
         </div>
         <div className={styles.ctaContainer}>
-        <Link href="/SignUp">
-          <button className={styles.ctaButton}>Try our program for FREE for 1 week!</button>
-        </Link>
+          <Link href="/SignUp">
+            <button className={styles.ctaButton}>Try our program for FREE for 1 week!</button>
+          </Link>
         </div>
       </section>
 

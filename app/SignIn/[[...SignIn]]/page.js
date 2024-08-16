@@ -1,9 +1,8 @@
+import { SignIn } from '@clerk/nextjs';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
-import { FcGoogle } from 'react-icons/fc';
-import styles from '../signin.module.css';
 import Link from 'next/link';
 import Footer from '../../components/footer';
-import {SignIn} from '@clerk/nextjs'
+import styles from '../signin.module.css';
 
 
 function LogInPage() {
