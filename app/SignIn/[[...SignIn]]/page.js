@@ -1,10 +1,12 @@
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import { FcGoogle } from 'react-icons/fc';
-import styles from './signin.module.css';
+import styles from '../signin.module.css';
 import Link from 'next/link';
-import Footer from '../components/footer';
+import Footer from '../../components/footer';
+import {SignIn} from '@clerk/nextjs'
 
-function SignIn() {
+
+function LogInPage() {
   return (
     <><div className={styles.pageContainer}>
       {/* Header Section */}
@@ -22,7 +24,8 @@ function SignIn() {
       <div className={styles.contentWrapper}>
         <h2 className={styles.subTitle}>Sign Into Your Account</h2>
         <div className={styles.formWrapper}>
-          <div className={styles.formContainer}>
+          <SignIn />
+          {/* <div className={styles.formContainer}>
             <form className={styles.form}>
               <input
                 type="email"
@@ -44,7 +47,7 @@ function SignIn() {
               <p >Don’t have an account? <a href="/SignUp" className={styles.signInText}>Sign up!</a>
               </p>
             </form>
-          </div>
+          </div> */}
         </div>
 
       </div>
@@ -53,4 +56,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default LogInPage;

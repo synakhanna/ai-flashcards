@@ -19,6 +19,10 @@ function Billing() {
           <button className={styles.homeButton}>Home</button>
         </Link>
       </header>
+
+      {/* Calling stripe checkout session  */}
+      
+
       <div className={styles.contentWrapper}>
         <h2 className={styles.subTitle}>Billing</h2>
         <div className={styles.formWrapper}>

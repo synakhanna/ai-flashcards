@@ -4,6 +4,12 @@ import Link from 'next/link';
 import Footer from '../components/footer';
 
 function SignIn() {
+  const { user, isLoaded } = useUser();
+
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
+  
   return (
     <><div className={styles.pageContainer}>
       {/* Header Section */}
