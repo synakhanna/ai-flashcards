@@ -9,18 +9,18 @@ import styles from "./code.module.css";
 export default function Home() {
   const [flashcards, setFlashcards] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false);
 
   const handleFlashcardsUpdate = (newFlashcards) => {
     setFlashcards(newFlashcards);
     setError(null);
-    setLoading(false); // Stop loading when flashcards are updated
+    setLoading(false);
   };
 
   const handleError = (errorMessage) => {
     setError(errorMessage);
     setFlashcards([]);
-    setLoading(false); // Stop loading if an error occurs
+    setLoading(false);
   };
 
   return (
@@ -30,13 +30,11 @@ export default function Home() {
       <FlashCardMenu
         onUpdateFlashcards={handleFlashcardsUpdate}
         onError={handleError}
-        setLoading={setLoading} // Pass setLoading to FlashCardMenu
+        setLoading={setLoading} 
       />
 
-      {/* Show the loading spinner while loading is true */}
       {loading && <div className={styles.loading}></div>}
 
-      {/* Show the flashcards only when loading is false */}
       {!loading && <FlashCardNav flashcards={flashcards} error={error} />}
 
       <Footer />
