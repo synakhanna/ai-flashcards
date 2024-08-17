@@ -45,26 +45,26 @@ Welcome to **CodeFlash**, a web application designed to help you ace your coding
 
   The app will be available at http://localhost:3000. 
 
-**Details 📋**
-*Usage 🎯*
-*Creating Flashcards 📝*
+##**Details 📋**
+#*Usage 🎯*
+#*Creating Flashcards 📝*
  - 1. Log in to your account using the "Sign In" page.
  - 2. Navigate to the "Flash Card" section.
  - 3. select the programming language, and hit "Save". 🎉
 
-* Reviewing Flashcards 📖 *
+#* Reviewing Flashcards 📖 *
 - Go to the "Saved Cards" page to see all your saved flashcards.
 - Flip through the cards, test your knowledge, and prepare confidently for your exams or interviews! 💪
 
-*Technologies Used 🛠️*
+#*Technologies Used 🛠️*
 - Next.js: Framework for building the app.
 - Firebase: Backend as a service for storing flashcards and user data.
 - Clerk: Authentication service for secure user sign-in.
 - React: For building interactive UI components.
 - CSS Modules: For styling the app with scoped CSS.
 
-Contribution by 🤝
-Fatima Riaz
-Syna Khanna
-Mukut Chowdhury
-Tahmidur Rabb
+##Contribution by 🤝
+#Fatima Riaz
+#Syna Khanna
+#Mukut Chowdhury
+#Tahmidur Rabb
