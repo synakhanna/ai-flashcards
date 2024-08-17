@@ -1,18 +1,17 @@
+import styles from "./components.module.css";
 
-import React from 'react';
-import styles from './components.module.css';
-
-export default function FlashCardMenu({ onUpdateFlashcards, onError }) {
+export default function FlashCardMenu({ onUpdateFlashcards, onError, setLoading }) {
   const handleLanguageClick = async (event, language) => {
-    event.preventDefault(); // Prevent default behavior of anchor tag
+    event.preventDefault();
 
-    window.alert(`Generating ${language} flashcards set... May take up to 10 seconds.`);
+    // Set loading to true when API call starts
+    setLoading(true);
 
     try {
-      const response = await fetch('/api/generate', {
-        method: 'POST',
+      const response = await fetch("/api/generate", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ message: language }), // Pass the language as the message
       });
@@ -20,29 +19,33 @@ export default function FlashCardMenu({ onUpdateFlashcards, onError }) {
       const data = await response.json();
 
       if (response.ok) {
-        //console.log("The response received in client: ", data);
         const cards = JSON.parse(data);
         onUpdateFlashcards(cards.flashcards || []);
       } else {
-        onError(data.error || 'An error occurred while generating flashcards.');
+        onError(data.error || "An error occurred while generating flashcards.");
       }
     } catch (err) {
-      onError(err.message || 'An error occurred.');
+      onError(err.message || "An error occurred.");
+    } finally {
+      // Set loading to false after API call completes
+      setLoading(false);
     }
   };
 
   return (
     <nav className={styles.nav}>
-      {['HTML', 'CSS', 'Python', 'JavaScript', 'Java', 'C', 'C++', 'SQL'].map((language) => (
-        <a
-          key={language}
-          href="#"
-          className={styles.navItem}
-          onClick={(event) => handleLanguageClick(event, language)}
-        >
-          {language}
-        </a>
-      ))}
+      {["HTML", "CSS", "Python", "JavaScript", "Java", "C", "C++", "SQL"].map(
+        (language) => (
+          <a
+            key={language}
+            href="#"
+            className={styles.navItem}
+            onClick={(event) => handleLanguageClick(event, language)}
+          >
+            {language}
+          </a>
+        )
+      )}
     </nav>
   );
 }
