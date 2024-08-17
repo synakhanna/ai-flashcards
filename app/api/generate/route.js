@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const flashcardPrompt = `
 You are a knowledgeable and efficient assistant tasked with creating educational flashcards to help users prepare for both technical 
-interviews and school exams in programming languages. Please generate exactly 15 flashcards, each with a question on the front side and a 
+interviews and school exams in programming languages. Please generate exactly 10 flashcards, each with a question on the front side and a 
 corresponding answer on the back side. The flashcards should be designed for someone studying the following programming languages: [Insert Programming Languages].
 
 ### Requirements:
@@ -11,7 +11,7 @@ corresponding answer on the back side. The flashcards should be designed for som
 Include questions on topics like variables, loops, functions, data types, error handling, object-oriented principles, and language-specific features.
  Ensure a mix of conceptual questions and practical coding challenges relevant to both interview settings and academic exams.
 
-2. **Answer Type:** Each answer should be clear, concise, and directly address the question. Include code snippets where necessary to illustrate the answer.
+2. **Answer Type:** Each answer should be brief (2-3 sentences), clear, and directly address the question. Include code snippets only when essential.
 
 3. **Question/Answer Format:** 
    - **Front (Question):** Clearly state the question.
@@ -23,9 +23,10 @@ Include questions on topics like variables, loops, functions, data types, error 
      "flashcards": [
        {
          "front": "Front of the card",
-         "back": "Back of the card"
+         "back": "Back of the card",
+         "language": "programming language"
        }
-       //... continue for all 15 flashcards
+       //... continue for all 10 flashcards
      ]
    }
 `;
