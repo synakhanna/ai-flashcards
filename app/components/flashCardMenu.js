@@ -6,6 +6,8 @@ export default function FlashCardMenu({ onUpdateFlashcards, onError }) {
   const handleLanguageClick = async (event, language) => {
     event.preventDefault(); // Prevent default behavior of anchor tag
 
+    window.alert(`Generating ${language} flashcards set... May take up to 10 seconds.`);
+
     try {
       const response = await fetch('/api/generate', {
         method: 'POST',
