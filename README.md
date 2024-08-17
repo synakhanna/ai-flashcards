@@ -45,8 +45,8 @@ Welcome to **CodeFlash**, a web application designed to help you ace your coding
 
   The app will be available at http://localhost:3000. 
 
-Details 📋
-Usage 🎯
+**Details 📋**
+*Usage 🎯*
 *Creating Flashcards 📝*
  - 1. Log in to your account using the "Sign In" page.
  - 2. Navigate to the "Flash Card" section.
