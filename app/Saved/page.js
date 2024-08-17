@@ -8,13 +8,13 @@ function SignIn() {
     <><div className={styles.pageContainer}>
       {/* Header Section */}
       <header className={styles.header}>
-        <Link href="/Home">
+        <Link href="/Code">
           <div className={styles.logo}>
             <FlashOnIcon className={styles.logoImage} />
             <h1 className={styles.title}>CodeFlash</h1>
           </div>
         </Link>
-        <Link href="/Home">
+        <Link href="/Code">
           <button className={styles.aboutButton}>Home</button>
         </Link>
       </header>

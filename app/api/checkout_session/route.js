@@ -11,7 +11,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 
 export async function POST(req) {
     try {
-        // We'll implement the checkout session creation here
         const params = {
             mode: "subscription",
             payment_method_types: ["card"],
@@ -20,9 +19,9 @@ export async function POST(req) {
                 price_data: {
                     currency: "usd",
                     product_data: {
-                        name: "Pro subscription",
+                        name: "CodeFlash",
                     },
-                    unit_amount: formatAmountForStripe(10, "usd"), // $10.00
+                    unit_amount: formatAmountForStripe(6.99, "usd"),
                     recurring: {
                         interval: "month",
                         interval_count: 1,
