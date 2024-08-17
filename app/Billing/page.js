@@ -2,6 +2,7 @@
 
 import {useEffect} from "react";
 
+
 function Billing() {
   useEffect(() => {
     // Create a Stripe Checkout session on page load
