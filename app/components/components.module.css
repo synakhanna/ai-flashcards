@@ -75,25 +75,6 @@ font-family: 'Fira Code', monospace;
   color: #1B1287;
 }
 
-.welcomeSection {
-  text-align: center;
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-  padding: 50px 0;
-}
-
-.welcomeMessage {
-  background-color: #1E3A8A;
-  padding: 50px;
-  font-size: 35px;
-  border-radius: 10px;
-}
-
 .main {
   display: flex;
   justify-content: space-around;
