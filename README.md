@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CodeFlash ⚡📚
 
-## Getting Started
+Welcome to **CodeFlash**, a web application designed to help you ace your coding interviews and exams! 🚀 This app lets you create, save, and review flashcards with questions and answers for various programming languages. It's built with modern web technologies and leverages Firebase for storing user data and Clerk for authentication. 💻
 
-First, run the development server:
+## Features ✨
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Flashcard Navigation**: Easily flip between flashcards with intuitive controls. 🔄
+- **Create Flashcards**: Add new flashcards with a question and answer format. ✍️
+- **Save Flashcards**: Save your flashcards to the cloud for easy access later. ☁️
+- **User Authentication**: Secure login and sign-up with Clerk. 🔒
+- **Responsive Design**: Enjoy a seamless experience across devices. 📱💻
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting Started 🚀
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Prerequisites 🛠️
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Node.js** (v14.x or higher) and **npm** installed.
+- A Firebase project set up with Firestore enabled.
+- A Clerk account for authentication.
 
-## Learn More
+### Installation 🔧
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/codeflash.git
+   cd codeflash
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies**:
+   npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Set up environment variables:**
+   Create a .env.local file in the root of your project and add your Firebase and Clerk credentials:
 
-## Deploy on Vercel
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+   NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
+   NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the app:**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   npm run dev
+
+  The app will be available at http://localhost:3000. 
+
+Details 📋
+Usage 🎯
+*Creating Flashcards 📝*
+ - 1. Log in to your account using the "Sign In" page.
+ - 2. Navigate to the "Flash Card" section.
+ - 3. select the programming language, and hit "Save". 🎉
+
+* Reviewing Flashcards 📖 *
+- Go to the "Saved Cards" page to see all your saved flashcards.
+- Flip through the cards, test your knowledge, and prepare confidently for your exams or interviews! 💪
+
+*Technologies Used 🛠️*
+- Next.js: Framework for building the app.
+- Firebase: Backend as a service for storing flashcards and user data.
+- Clerk: Authentication service for secure user sign-in.
+- React: For building interactive UI components.
+- CSS Modules: For styling the app with scoped CSS.
+
+Contribution by 🤝
+Fatima Riaz
+Syna Khanna
+Mukut Chowdhury
+Tahmidur Rabb
