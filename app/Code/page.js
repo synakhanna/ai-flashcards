@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { SignedIn, SignedOut, useAuth, RedirectToSignIn } from "@clerk/clerk-react";
 import FlashCardMenu from "../components/flashCardMenu";
 import FlashCardNav from "../components/flashCardNav";
 import Footer from "../components/footer";
@@ -25,6 +26,7 @@ export default function Home() {
 
   return (
     <>
+      <SignedIn> 
       <div className={styles.container}>
         <Header />
 
@@ -44,6 +46,12 @@ export default function Home() {
       </div>
 
       <Footer />
+      </SignedIn>
+
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+
     </>
   );
 }
