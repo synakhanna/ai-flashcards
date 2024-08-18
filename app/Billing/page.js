@@ -5,18 +5,30 @@ import Footer from "../components/footer";
 import styles from "./billing.module.css"
 import Link from 'next/link';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
+import {db} from '../firebase';
+import {doc, updateDoc } from 'firebase/firestore';
+import { useClerk } from '@clerk/nextjs';
+
 
 function Billing() {
   const [loading, setLoading] = useState(false);
-
+  const { user } = useClerk(); // Access the signed-in user
+  
   const handleCheckout = async () => {
+    if (!user) {
+      console.error('User not signed in');
+      return;
+    }
+
     setLoading(true);
+
     try {
       const response = await fetch('/api/checkout_session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ userId: user.id }), // Pass user ID to the API
       });
 
       const session = await response.json();
@@ -35,7 +47,7 @@ function Billing() {
   };
 
   return (
-    <> 
+    <>
       <div className={styles.pageContainer}>
         {/* Header Section */}
         <header className={styles.header}>
@@ -52,17 +64,17 @@ function Billing() {
         <div className={styles.contentWrapper}>
           <h1>Billing</h1>
           <p>Get a subscription to use CodeFlash! Only $6.99 a month.</p>
-        <button 
-          className={styles.button} 
-          onClick={handleCheckout} 
-          disabled={loading}
-        >
-          {loading ? 'Redirecting...' : 'Start Subscription'}
-        </button>
+          <button
+            className={styles.button}
+            onClick={handleCheckout}
+            disabled={loading}
+          >
+            {loading ? 'Redirecting...' : 'Start Subscription'}
+          </button>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-      </div>
-    </> 
+    </>
   );
 }
 
