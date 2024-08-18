@@ -34,10 +34,13 @@ export default function Home() {
           setLoading={setLoading}
         />
 
-        {loading && <div className={styles.loading}></div>}
+        {loading && (
+          <div className={styles["loading-wrapper"]}>
+            <div className={styles.loading}></div>
+          </div>
+        )}
 
         {!loading && <FlashCardNav flashcards={flashcards} error={error} />}
-      
       </div>
 
       <Footer />

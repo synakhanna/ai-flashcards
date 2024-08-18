@@ -3,7 +3,23 @@
   color: #FFFFFF;
   font-family: 'Fira Code', monospace;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; 
+  background: rgba(0, 0, 0, 0.5); 
+}
+
 .loading {
   border: 16px solid #f3f3f3;
   border-top: 16px solid #3498db;
@@ -11,7 +27,6 @@
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
-  margin: 20px auto;
 }
 
 @keyframes spin {
