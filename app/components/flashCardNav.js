@@ -82,8 +82,8 @@ export default function FlashCardNav({ flashcards, error }) {
 
   return (
   <main className={styles.main}>
-    <div className={styles.flashcard}>
-      <div className={styles.flashcardInner}>
+     <div className={styles.flashcard} onClick={handleFlip}>
+     <div className={`${styles.flashcardInner} ${isFlipped ? styles.isFlipped : ''}`}>
         <div className={styles.flashcardFront}>
           {flashcards.length === 0
             ? "Hello! Select a language to generate flashcards."
