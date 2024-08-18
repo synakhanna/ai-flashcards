@@ -81,43 +81,48 @@ export default function FlashCardNav({ flashcards, error }) {
   const currentCard = flashcards[currentCardIndex];
 
   return (
-    <main className={styles.main}>
-      <div className={styles.flashcard}>
-        <div className={styles.cardContent}>
+  <main className={styles.main}>
+    <div className={styles.flashcard}>
+      <div className={styles.flashcardInner}>
+        <div className={styles.flashcardFront}>
           {flashcards.length === 0
             ? "Hello! Select a language to generate flashcards."
-            : isFlipped
-            ? "Answer: " + currentCard.back
             : "Question: " + currentCard.front}
         </div>
+        <div className={styles.flashcardBack}>
+          {flashcards.length === 0
+            ? "No flashcards available."
+            : "Answer: " + currentCard.back}
+        </div>
       </div>
-      <div className={styles.controls}>
-        <button className={styles.controlButton} onClick={handleFlip}>
-          Flip
-        </button>
-        <button
-          className={styles.controlButton}
-          onClick={handleNext}
-          disabled={currentCardIndex >= flashcards.length - 1}
-        >
-          Next
-        </button>
-        <button
-          className={styles.controlButton}
-          onClick={handleBack}
-          disabled={currentCardIndex === 0}
-        >
-          Back
-        </button>
-        <button className={styles.controlButton} onClick={saveFlashcard}>
-          Save
-        </button>
-      </div>
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        message={modalMessage}
-      />
-    </main>
-  );
+    </div>
+    <div className={styles.controls}>
+      <button className={styles.controlButton} onClick={handleFlip}>
+        Flip
+      </button>
+      <button
+        className={styles.controlButton}
+        onClick={handleNext}
+        disabled={currentCardIndex >= flashcards.length - 1}
+      >
+        Next
+      </button>
+      <button
+        className={styles.controlButton}
+        onClick={handleBack}
+        disabled={currentCardIndex === 0}
+      >
+        Back
+      </button>
+      <button className={styles.controlButton} onClick={saveFlashcard}>
+        Save
+      </button>
+    </div>
+    <Modal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+      message={modalMessage}
+    />
+  </main>
+);
 }

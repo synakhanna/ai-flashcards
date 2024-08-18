@@ -53,6 +53,7 @@ function Page() {
   }
 
   return (
+    <>
     <main className={styles.main}>
       {/* Header Section */}
       <header className={styles.header}>
@@ -133,9 +134,10 @@ function Page() {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <Footer />
+      {/* Footer Section */}  
     </main>
+    <Footer />
+    </>
   );
 }
 

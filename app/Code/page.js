@@ -24,20 +24,23 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
-      <Header />
+    <>
+      <div className={styles.container}>
+        <Header />
 
-      <FlashCardMenu
-        onUpdateFlashcards={handleFlashcardsUpdate}
-        onError={handleError}
-        setLoading={setLoading} 
-      />
+        <FlashCardMenu
+          onUpdateFlashcards={handleFlashcardsUpdate}
+          onError={handleError}
+          setLoading={setLoading}
+        />
 
-      {loading && <div className={styles.loading}></div>}
+        {loading && <div className={styles.loading}></div>}
 
-      {!loading && <FlashCardNav flashcards={flashcards} error={error} />}
+        {!loading && <FlashCardNav flashcards={flashcards} error={error} />}
+      
+      </div>
 
       <Footer />
-    </div>
+    </>
   );
 }
