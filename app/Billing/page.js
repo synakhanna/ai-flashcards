@@ -1,6 +1,6 @@
 "use client"
 
-import {useState, useEffect} from "react";
+import { useState } from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
@@ -83,7 +83,7 @@ const styles = {
   },
   subtitle: {
     fontSize: '18px',
-    color: '#666',
+    color: 'white',
   },
   button: {
     padding: '15px 30px',
