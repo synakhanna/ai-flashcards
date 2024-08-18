@@ -58,7 +58,7 @@
 .tableContainer {
   margin: 30px auto;
   width: 100%;
-  max-width: 800px;
+  max-width: 80%;
   overflow-x: auto; 
   border-collapse: collapse;
   font-family: 'Fira Code', monospace;
