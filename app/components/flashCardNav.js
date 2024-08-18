@@ -23,6 +23,10 @@ export default function FlashCardNav({ flashcards, error }) {
       setCurrentCardIndex(currentCardIndex + 1);
       setIsFlipped(false);
     }
+    else {
+      setModalMessage("Card limit reached. Click the desired language to generate more cards.");
+      setIsModalOpen(true);
+    }
   };
 
   const handleBack = () => {
@@ -103,7 +107,7 @@ export default function FlashCardNav({ flashcards, error }) {
       <button
         className={styles.controlButton}
         onClick={handleNext}
-        disabled={currentCardIndex >= flashcards.length - 1}
+        disabled={flashcards.length === 0}
       >
         Next
       </button>
