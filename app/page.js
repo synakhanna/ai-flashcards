@@ -94,7 +94,7 @@ function Page() {
       </section>
 
       {/* Scroll Up */}
-      <section className={styles.learnMore}>
+      <section className={`${styles.learnMore}, ${styles.scrollUp}`}>
         <a
           href="#"
           className={styles.learnMoreLink}

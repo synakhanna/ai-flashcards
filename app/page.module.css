@@ -83,7 +83,7 @@
 .learnMore {
   text-align: center;
   font-size: 60px;
-  margin: 10px 0;
+  margin-bottom: 15%;
 }
 
 .learnMoreLink {
@@ -94,9 +94,9 @@
   margin-bottom: 0px;
 }
 
-.learnMoreLink:after {
-  display: block;
-  font-size: 50px;
+.scrollUp {
+  text-align: center;
+  font-size: 60px;
 }
 
 .features {
@@ -157,11 +157,11 @@
   }
 
   .learnMore {
-    font-size: 50px;
+    display: none;
   }
 
-  .learnMoreLink {
-    font-size: 25px;
+  .scrollUp {
+    display: none;
   }
 
   .featureItem h3 {
@@ -190,10 +190,6 @@
 
   .ctaButton {
     padding: 10px 50px;
-  }
-
-  .learnMore {
-    font-size: 40px;
   }
 
   .featureGrid {
@@ -226,10 +222,6 @@
   .ctaButton {
     padding: 8px 30px;
     font-size: 14px;
-  }
-
-  .learnMore {
-    font-size: 30px;
   }
 
   .featureGrid {
