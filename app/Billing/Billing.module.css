@@ -16,8 +16,28 @@
   margin: 0 30px;
 }
 
+.homeButton {
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Fira Code', monospace;
+  transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #FFFFFF;
+  color: #1B1287;
+}
+
 .contentWrapper {
   flex: 1;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,202 +57,36 @@
   margin-right: 10px;
 }
 
-.homeButton {
-  background-color: transparent;
-  border: 2px solid #FFFFFF;
-  color: #FFFFFF;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.homeButton:hover {
-  background-color: #FFFFFF;
-  color: #1B1287;
-}
-
-.subTitle {
-  font-size: 2rem;
-  text-align: center;
-}
-
-.formWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 30px;
-}
-
-.formContainer {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: black;
-  border-radius: 10px;
-  padding: 30px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  box-sizing: border-box; 
-}
-
-.formTitle {
-  margin-bottom: 20px;
-  color: #1B1287;
-  font-size: 1.5rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.input {
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  width: 100%; 
-  box-sizing: border-box; 
-}
-
-.inputGroup {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  width: 100%; 
-  box-sizing: border-box;
-}
-
-.inputSmall {
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box; 
-}
-
-.payButton {
-  padding: 14px;
-  background-color: #1B1287;
-  color: white;
+.button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #0D1B2A;
+  padding: 10px 100px;
+  font-size: 18px;
   border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
   cursor: pointer;
-  margin-top: 20px;
-  width: 100%;
-  box-sizing: border-box; 
-}
-
-.payButton:hover {
-  background-color: rgb(71, 148, 237);
-}
-
-.lockAndText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-.lockAndText p {
-  margin-left: 10px;
-  color: #1B1287;
-  font-size: 0.9rem;
-}
-
-.unsubscribeButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: white;
-  color: #1B1287;
-  border: none;
   border-radius: 5px;
-  font-size: 1rem;
   font-weight: bold;
-  cursor: pointer;
-  margin-top: 40px;
-  margin-bottom: 60px;
-  width: auto; 
-  padding-left: 30px;
-  padding-right: 30px;
-  transition: all 0.3s ease;
+  font-family: 'Fira Code', monospace;
+  transition: all 0.3s ease-in-out;
 }
 
-.unsubscribeButton:hover {
-  font-size: 1.5rem;
-  background-color: red;
-  color: white;
+.button:hover {
+  font-size: 25px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    margin: 0;
+    text-align: center;
+  }
+
+  .header .logo {
+    margin-bottom: 20px;
   }
 
   .homeButton {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
   }
-
-  .formContainer {
-    padding: 20px;
-  }
-
-  .inputGroup {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .inputSmall {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .unsubscribeButton {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .subTitle {
-    font-size: 1.5rem;
-  }
-
-  .formContainer {
-    max-width: 320px;
-    padding: 15px;
-  }
-
-  .homeButton {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  .inputGroup {
-    flex-direction: column;
-  }
-
-  .inputSmall,
-  .input {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .formWrapper {
-    padding: 10px;
-  }
+  
 }

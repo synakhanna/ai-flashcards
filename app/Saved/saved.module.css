@@ -37,7 +37,7 @@
   margin-right: 10px;
 }
 
-.aboutButton {
+.homeButton {
   background-color: transparent;
   border: 2px solid #FFFFFF;
   color: #FFFFFF;
@@ -51,11 +51,10 @@
   transition: background-color 0.3s ease;
 }
 
-.aboutButton:hover {
+.homeButton:hover {
   background-color: #FFFFFF;
   color: #1B1287;
 }
-
 .tableContainer {
   margin: 30px auto;
   width: 100%;
@@ -111,7 +110,7 @@
     margin-bottom: 20px;
   }
 
-  .aboutButton {
+  .homeButton {
     width: 100%;
     margin-top: 10px;
   }

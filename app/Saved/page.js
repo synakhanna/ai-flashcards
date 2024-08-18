@@ -44,7 +44,7 @@ function SavedCardsPage() {
             </div>
           </Link>
           <Link href="/Code">
-            <button className={styles.aboutButton}>Home</button>
+            <button className={styles.homeButton}>Home</button>
           </Link>
         </header>
 

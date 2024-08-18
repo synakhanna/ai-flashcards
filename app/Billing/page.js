@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Footer from "../components/footer";
-import Header from "../components/header";
-
-
+import styles from "./billing.module.css"
+import Link from 'next/link';
+import FlashOnIcon from '@mui/icons-material/FlashOn';
 
 function Billing() {
   const [loading, setLoading] = useState(false);
@@ -36,15 +36,24 @@ function Billing() {
 
   return (
     <> 
-   <div style={styles.page}>
-      <Header />
-      <div style={styles.container}>
-        <div style={styles.textContainer}>
-          <h1 style={styles.title}>Buy Now</h1>
-          <p style={styles.subtitle}>Get a subscription to use CodeFlash!</p>
-        </div>
+      <div className={styles.pageContainer}>
+        {/* Header Section */}
+        <header className={styles.header}>
+          <Link href="/Code">
+            <div className={styles.logo}>
+              <FlashOnIcon className={styles.logoImage} />
+              <h1 className={styles.title}>CodeFlash</h1>
+            </div>
+          </Link>
+          <Link href="/Code">
+            <button className={styles.homeButton}>Home</button>
+          </Link>
+        </header>
+        <div className={styles.contentWrapper}>
+          <h1>Billing</h1>
+          <p>Get a subscription to use CodeFlash! Only $6.99 a month.</p>
         <button 
-          style={styles.button} 
+          className={styles.button} 
           onClick={handleCheckout} 
           disabled={loading}
         >
@@ -52,46 +61,9 @@ function Billing() {
         </button>
       </div>
       <Footer />
-    </div>
+      </div>
     </> 
   );
 }
 
 export default Billing;
-
-const styles = {
-  page: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-  },
-  container: {
-    flex: '1',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '20px',
-  },
-  textContainer: {
-    textAlign: 'center',
-    marginBottom: '40px', // Adds space between the subtitle and the button
-  },
-  title: {
-    fontSize: '36px',
-    marginBottom: '10px', // Adds space between the title and subtitle
-  },
-  subtitle: {
-    fontSize: '18px',
-    color: 'white',
-  },
-  button: {
-    padding: '15px 30px',
-    fontSize: '18px',
-    backgroundColor: '#0070f3',
-    color: 'white',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  },
-};
