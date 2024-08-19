@@ -292,6 +292,8 @@ font-family: 'Fira Code', monospace;
   .flashcard {
     width: 362.5px;
     height: 225px;
+    font-size: 15px
+    ;
   }
 
   .controls {
@@ -319,6 +321,9 @@ font-family: 'Fira Code', monospace;
 
   .navItem {
     font-size: 16px;
+    font-weight: normal;
+    padding: 5px;
+    border: 1px solid white; /* Change the color as needed */
   }
 
   .logoutButton {
@@ -332,28 +337,40 @@ font-family: 'Fira Code', monospace;
   }
 
   .flashcard {
-    width: 150px;
-    height: 100px;
-    font-size: 22px;
+    width: 110px;
+    height: 110px;
+    font-size: 15px;
   }
 
   .flashcardFront, .flashcardBack {
     position: absolute;
-    width: 100%;
-    height: 100%;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
-    padding: 60px;
+    font-size: 10px;
     border-radius: 10px;
   }
+
+  /* Front side styling */
+.flashcardFront {
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 120px 50px;
+}
+
+/* Back side styling */
+.flashcardBack {
+  background-color: #333;
+  color: #fff;
+  transform: rotateY(180deg); /* Rotate the back side to align correctly */
+  padding: 120px 50px;
+}
 
   .controlButton {
     padding: 8px 20px;
     font-size: 14px;
-    margin-top: 50px;
+    margin-top: 160px;
   }
 
   .footer p {
