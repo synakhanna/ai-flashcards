@@ -311,7 +311,7 @@ font-family: 'Fira Code', monospace;
   }
 }
 
-/* Extra small screens (max-width: 480px) */
+/* Extra small screens (max-width: 600px) */
 @media screen and (max-width: 600px) {
   .header {
     padding: 5px;
@@ -332,8 +332,8 @@ font-family: 'Fira Code', monospace;
   }
 
   .flashcard {
-    width: 242px;
-    height: 150px;
+    width: 150px;
+    height: 100px;
     font-size: 22px;
   }
 
@@ -353,6 +353,7 @@ font-family: 'Fira Code', monospace;
   .controlButton {
     padding: 8px 20px;
     font-size: 14px;
+    margin-top: 50px;
   }
 
   .footer p {
