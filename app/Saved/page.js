@@ -100,6 +100,9 @@ function SavedCardsPage() {
             </button>
                </tr>
                 <tr>
+                  <th>Language</th>
+                  <th>Question</th>
+                  <th>Answer</th>
                   <th>
                     <input
                       type="checkbox"
@@ -107,9 +110,6 @@ function SavedCardsPage() {
                       onChange={handleSelectAll}
                     />
                   </th>
-                  <th>Language</th>
-                  <th>Question</th>
-                  <th>Answer</th>
                 </tr>
               </thead>
               <tbody>
@@ -120,6 +120,9 @@ function SavedCardsPage() {
                 ) : (
                   flashcards.map((card, index) => (
                     <tr key={index}>
+                      <td>{card.language}</td>
+                      <td>{card.question}</td>
+                      <td>{card.answer}</td>
                       <td>
                         <input
                           type="checkbox"
@@ -127,9 +130,6 @@ function SavedCardsPage() {
                           onChange={() => handleSelectCard(index)}
                         />
                       </td>
-                      <td>{card.language}</td>
-                      <td>{card.question}</td>
-                      <td>{card.answer}</td>
                     </tr>
                   ))
                 )}

@@ -106,28 +106,33 @@
   color: white;
   font-size: 16px;
   padding: 10px 20px;
+  box-sizing: border-box;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   outline: none;
+  font-family: 'Fira Code', monospace;
 }
 
 .deleteButton:disabled {
-  background-color: #ccc; /* Gray color when disabled */
+  background-color: #d26161; /* Gray color when disabled */
   cursor: not-allowed;
   transform: none;
 }
 
+.deleteButton:disabled:hover {
+  background-color: none; /* Gray color when disabled */
+  color: none;
+}
+
 .deleteButton:not(:disabled):hover {
-  background-color: #ff6666; /* Lighter red on hover */
+  background-color: #701010; /* Lighter red on hover */
 }
 
 .deleteButton:not(:disabled):active {
-  background-color: #ff3333; /* Darker red on click */
+  background-color: #8bb9f1; /* Darker red on click */
   transform: translateY(2px);
 }
-
 
 /* --------------------------------------------------------------------- */
 
