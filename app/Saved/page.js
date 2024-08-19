@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase'; // Adjust the path to your Firebase config file
 import { useClerk } from '@clerk/nextjs';
 import Link from 'next/link';
@@ -10,6 +10,8 @@ import styles from './saved.module.css';
 
 function SavedCardsPage() {
   const [flashcards, setFlashcards] = useState([]);
+  const [selectedCards, setSelectedCards] = useState([]);
+  const [isSelectAll, setIsSelectAll] = useState(false);
   const { user } = useClerk();
 
   useEffect(() => {
@@ -32,6 +34,39 @@ function SavedCardsPage() {
     fetchFlashcards();
   }, [user]);
 
+  const handleSelectCard = (index) => {
+    const selectedIndex = selectedCards.indexOf(index);
+    if (selectedIndex > -1) {
+      setSelectedCards(selectedCards.filter((i) => i !== index));
+    } else {
+      setSelectedCards([...selectedCards, index]);
+    }
+  };
+
+  const handleSelectAll = () => {
+    if (isSelectAll) {
+      setSelectedCards([]);
+      setIsSelectAll(false);
+    } else {
+      setSelectedCards(flashcards.map((_, index) => index));
+      setIsSelectAll(true);
+    }
+  };
+
+  const handleDeleteSelected = async () => {
+    const remainingCards = flashcards.filter((_, index) => !selectedCards.includes(index));
+
+    try {
+      const userRef = doc(db, 'users', user.id);
+      await updateDoc(userRef, { flashcards: remainingCards });
+      setFlashcards(remainingCards);
+      setSelectedCards([]);
+      setIsSelectAll(false);
+    } catch (error) {
+      console.error("Error deleting flashcards: ", error);
+    }
+  };
+
   return (
     <>
       <div className={styles.pageContainer}>
@@ -51,10 +86,27 @@ function SavedCardsPage() {
         {/* Content Section */}
         <div className={styles.contentWrapper}>
           <div className={styles.tableContainer}>
+          
             <table>
               <caption>Saved Cards</caption>
               <thead>
+               <tr>
+               <button
+              className={styles.deleteButton}
+              onClick={handleDeleteSelected}
+              disabled={selectedCards.length === 0}
+            >
+              Delete Selected
+            </button>
+               </tr>
                 <tr>
+                  <th>
+                    <input
+                      type="checkbox"
+                      checked={isSelectAll}
+                      onChange={handleSelectAll}
+                    />
+                  </th>
                   <th>Language</th>
                   <th>Question</th>
                   <th>Answer</th>
@@ -63,11 +115,18 @@ function SavedCardsPage() {
               <tbody>
                 {flashcards.length === 0 ? (
                   <tr>
-                    <td colSpan="3">No saved flashcards.</td>
+                    <td colSpan="4">No saved flashcards.</td>
                   </tr>
                 ) : (
                   flashcards.map((card, index) => (
                     <tr key={index}>
+                      <td>
+                        <input
+                          type="checkbox"
+                          checked={selectedCards.includes(index)}
+                          onChange={() => handleSelectCard(index)}
+                        />
+                      </td>
                       <td>{card.language}</td>
                       <td>{card.question}</td>
                       <td>{card.answer}</td>
@@ -87,4 +146,3 @@ function SavedCardsPage() {
 }
 
 export default SavedCardsPage;
-
