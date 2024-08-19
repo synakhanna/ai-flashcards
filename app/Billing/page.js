@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Footer from "../components/footer";
-import styles from "./billing.module.css"
+import styles from "./Billing.module.css"
 import Link from 'next/link';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import {db} from '../firebase';
