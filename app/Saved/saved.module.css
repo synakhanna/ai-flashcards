@@ -157,25 +157,38 @@
     padding: 0 10px;
   }
 
+  .tableContainer table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
   .tableContainer th,
   .tableContainer td {
     padding: 8px 10px;
     font-size: 14px;
+    word-wrap: break-word;
   }
 
   .tableContainer caption {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 
 @media (max-width: 480px) {
+
+  .tableContainer {
+    padding: 0 5px;
+  }
+
   .tableContainer th,
   .tableContainer td {
     padding: 5px;
     font-size: 12px;
+    word-wrap: break-word;
   }
 
   .tableContainer caption {
     font-size: 1.5rem;
   }
 }
+
