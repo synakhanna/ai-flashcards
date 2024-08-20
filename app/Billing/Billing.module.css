@@ -90,3 +90,104 @@
   }
   
 }
+
+.billingContainer {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 80%;
+  overflow-x: auto; 
+  border-collapse: collapse;
+  font-family: 'Fira Code', monospace;
+  color: white;
+}
+
+.billingTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.billingTable th,
+.billingTable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #070421;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.billingTable th {
+  background-color: #1B1287;
+  color: white;
+  font-weight: bold;
+}
+
+.billingTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.billingTable tr:hover {
+  background-color: #ddd;
+}
+
+.billingTable caption {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #0D1B2A;
+  padding: 10px 100px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  font-size: 25px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .billingContainer {
+    padding: 0 10px;
+  }
+
+  .billingTable th,
+  .billingTable td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .billingTable caption {
+    font-size: 1.7rem;
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .billingContainer {
+    padding: 0 5px;
+  }
+
+  .billingTable th,
+  .billingTable td {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .billingTable caption {
+    font-size: 1.5rem;
+  }
+}

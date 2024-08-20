@@ -110,35 +110,52 @@ function Billing() {
       <Header></Header>
         <div className={styles.contentWrapper}>
           <h1>Billing</h1>
-          <p>Get a subscription to use CodeFlash! Only $6.99 a month.</p>
           
           {billingDetails ? (
-            <div>
-              <h2>Billing Information</h2>
-              <p>Subscription Active</p>
-              <p>Email: {billingDetails.email}</p>
-              <p>Customer ID: {billingDetails.customerId}</p>
-              <p>Plan: {billingDetails.plan}</p>
-              <p>Status: {billingDetails.status}</p>
-              <p>Subscription Start: {new Date(billingDetails.subscriptionStart * 1000).toLocaleDateString()}</p>
-              <p>Next Billing: {new Date(billingDetails.subscriptionEnd * 1000).toLocaleDateString()}</p>
-              <button
-                className={styles.button}
-                onClick={handleCancelSubscription}
-                disabled={loading}
-              >
-                {loading ? 'Cancelling...' : 'Cancel Subscription'}
-              </button>
-            </div>
-          ) : (
-            <button
-              className={styles.button}
-              onClick={handleCheckout}
-              disabled={loading}
-            >
-              {loading ? 'Redirecting...' : 'Start Subscription'}
-            </button>
-          )}
+  <div className={styles.billingContainer}>
+    <table className={styles.billingTable}>
+      <caption>Billing Information</caption>
+      <tbody>
+        <tr>
+          <th>Email</th>
+          <td>{billingDetails.email}</td>
+        </tr>
+        <tr>
+          <th>Customer ID</th>
+          <td>{billingDetails.customerId}</td>
+        </tr>
+        <tr>
+          <th>Status</th>
+          <td>{billingDetails.status}</td>
+        </tr>
+        <tr>
+          <th>Subscription Start</th>
+          <td>{new Date(billingDetails.subscriptionStart * 1000).toLocaleDateString()}</td>
+        </tr>
+        <tr>
+          <th>Next Billing</th>
+          <td>{new Date(billingDetails.subscriptionEnd * 1000).toLocaleDateString()}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button
+      className={styles.button}
+      onClick={handleCancelSubscription}
+      disabled={loading}
+    >
+      {loading ? 'Cancelling...' : 'Cancel Subscription'}
+    </button>
+  </div>
+) : (
+  <button
+    className={styles.button}
+    onClick={handleCheckout}
+    disabled={loading}
+  >
+    <p>Get a subscription to use CodeFlash! Only $6.99 a month.</p>
+    {loading ? 'Redirecting...' : 'Start Subscription'}
+  </button>
+)}
         </div>
         <Footer />
       </div>
