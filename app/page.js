@@ -8,10 +8,11 @@ import Link from 'next/link';
 import Footer from './components/footer';
 import styles from "./page.module.css";
 import Header from './components/header';  
-
-import { useUser } from "@clerk/nextjs"; // Clerk hook to get the user
+import { useClerk } from '@clerk/nextjs';
 
 function Page() {
+  const { user } = useClerk(); // Access the signed-in user
+  const {isSignedIn} = useUser();
   const handleLearnMoreClick = (e) => {
     e.preventDefault();
     const targetPosition = document.querySelector('#learn-more').offsetTop;
