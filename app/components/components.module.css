@@ -204,6 +204,10 @@ font-family: 'Fira Code', monospace;
   font-family: 'Fira Code', monospace;
 }
 
+.linkedinLogo {
+  margin-left: 20px;
+}
+
 
 /* components/modal.module.css */
 .modalOverlay {
