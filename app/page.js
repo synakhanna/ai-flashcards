@@ -7,8 +7,25 @@ import FlashOnIcon from '@mui/icons-material/FlashOn';
 import Link from 'next/link';
 import Footer from './components/footer';
 import styles from "./page.module.css";
+import { useUser } from "@clerk/nextjs"; // Clerk hook to get the user
 
 function Page() {
+  
+  const { isLoaded, user } = useUser(); // Get the current signed-in user from Clerk
+
+  useEffect(() => {
+
+      if (!isLoaded) {
+        console.log("The user data is still loading");
+        return;
+      }
+
+      if (!user) {
+        console.log("User not signed in");
+        return;
+      }
+    });
+
   const handleLearnMoreClick = (e) => {
     e.preventDefault();
     const targetPosition = document.querySelector('#learn-more').offsetTop;
@@ -77,6 +94,7 @@ function Page() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className="container">
+          <p className={styles.subtitle}>{user && "Welcome!"}</p>
           <h1 className={styles.title}>CodeFlash</h1>
           <p className={styles.subtitle}>The AI generated flashcards you need to learn coding.</p>
           <Link href="/SignUp">
