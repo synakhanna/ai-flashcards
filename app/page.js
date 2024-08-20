@@ -1,14 +1,19 @@
 "use client";
 
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import Link from 'next/link';
 import Footer from './components/footer';
 import styles from "./page.module.css";
+import Header from './components/header';  
+
 
 function Page() {
+  const {isSignedIn} = useUser(); //this is where you call the clerk to check if user is present 
+
+  
   const handleLearnMoreClick = (e) => {
     e.preventDefault();
     const targetPosition = document.querySelector('#learn-more').offsetTop;
@@ -55,24 +60,29 @@ function Page() {
   return (
     <>
     <main className={styles.main}>
-      {/* Header Section */}
-      <header className={styles.header}>
-        <div className={styles.logoContainer}>
-          <Link href="/">
-            <FlashOnIcon style={{ fontSize: 80 }} />
-          </Link>
-        </div>
-        <div className={styles.signInContainer}>
-          <SignedOut>
-            <SignInButton mode="modal">
-              <button className={styles.signInButton}>Sign In</button>
-            </SignInButton>
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </div>
-      </header>
+    {isSignedIn ? (
+        // Render the custom Header component if the user is signed in
+        <Header />
+      ) : (
+        // Default header with sign-in option if the user is not signed in
+        <header className={styles.header}>
+          <div className={styles.logoContainer}>
+            <Link href="/">
+              <FlashOnIcon style={{ fontSize: 80 }} />
+            </Link>
+          </div>
+          <div className={styles.signInContainer}>
+            <SignedOut>
+              <SignInButton mode="modal">
+                <button className={styles.signInButton}>Sign In</button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </div>
+        </header>
+      )}
 
       {/* Hero Section */}
       <section className={styles.hero}>

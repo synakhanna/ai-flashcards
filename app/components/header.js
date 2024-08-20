@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Header() {
   return (
     <header className={Styles.header}>
-      <div className={Styles.logo} onClick={() => window.location.href='/Code'}>
+      <div className={Styles.logo} onClick={() => window.location.href='/'}>
         <FlashOnIcon className={Styles.logoImage} />
         <h1 className={Styles.title}>CodeFlash</h1>
       </div>
