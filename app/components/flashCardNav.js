@@ -165,18 +165,19 @@ export default function FlashCardNav({ flashcards, error }) {
         </button>
         <button
           className={styles.controlButton}
-          onClick={handleNext}
-          disabled={flashcards.length === 0}
-        >
-          Next
-        </button>
-        <button
-          className={styles.controlButton}
           onClick={handleBack}
           disabled={currentCardIndex === 0}
         >
           Back
         </button>
+        <button
+          className={styles.controlButton}
+          onClick={handleNext}
+          disabled={flashcards.length === 0}
+        >
+          Next
+        </button>
+       
         <button className={styles.controlButton} onClick={saveFlashcard}>
           Save
         </button>
