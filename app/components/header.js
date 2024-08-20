@@ -12,6 +12,9 @@ export default function Header() {
         <h1 className={Styles.title}>CodeFlash</h1>
       </div>
       <div className={Styles.actions}>
+        <Link href="/Code">
+          <button className={Styles.logoutButton}>Flashcards</button>
+        </Link>
         <Link href="/Saved">
           <button className={Styles.logoutButton}>Saved</button>
         </Link>

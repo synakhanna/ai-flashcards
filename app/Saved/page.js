@@ -4,7 +4,7 @@ import FlashOnIcon from '@mui/icons-material/FlashOn';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase'; // Adjust the path to your Firebase config file
 import { useClerk } from '@clerk/nextjs';
-import Link from 'next/link';
+import Header from '../components/header';
 import Footer from '../components/footer';
 import styles from './saved.module.css';
 
@@ -70,18 +70,7 @@ function SavedCardsPage() {
   return (
     <>
       <div className={styles.pageContainer}>
-        {/* Header Section */}
-        <header className={styles.header}>
-          <Link href="/Code">
-            <div className={styles.logo}>
-              <FlashOnIcon className={styles.logoImage} />
-              <h1 className={styles.title}>CodeFlash</h1>
-            </div>
-          </Link>
-          <Link href="/Code">
-            <button className={styles.homeButton}>Home</button>
-          </Link>
-        </header>
+        <Header></Header>
 
         {/* Content Section */}
         <div className={styles.contentWrapper}>

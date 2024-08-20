@@ -3,12 +3,14 @@
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import FlashOnIcon from '@mui/icons-material/FlashOn';
 import Link from 'next/link';
 import Footer from './components/footer';
 import styles from "./page.module.css";
-import Header from './components/header';  
+import LandingHeader from './components/landingHeader';  
+import Header from './components/header';
 import { useClerk } from '@clerk/nextjs';
+import React, { useState } from 'react';
+
 
 function Page() {
   const { user } = useClerk(); // Access the signed-in user
@@ -58,44 +60,27 @@ function Page() {
 
   return (
     <>
-    <main className={styles.main}>
-    {isSignedIn ? (
-        // Render the custom Header component if the user is signed in
-        <Header />
-      ) : (
-        // Default header with sign-in option if the user is not signed in
-        <header className={styles.header}>
-          <div className={styles.logoContainer}>
-            <Link href="/">
-              <FlashOnIcon style={{ fontSize: 80 }} />
-            </Link>
-          </div>
-          <div className={styles.signInContainer}>
-            <SignedOut>
-              <SignInButton mode="modal">
-                <button className={styles.signInButton}>Sign In</button>
-              </SignInButton>
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </div>
-        </header>
-      )}
+  <main className={styles.main}>
+    <SignedIn> 
+      <Header />
 
-      {/* Hero Section */}
+      <section className={styles.welcomeSection}>
+        <h2 className={styles.welcomeMessage}>Welcome back to your CodeFlash dashboard!</h2>
+      </section>
+    
+    <Footer />
+    </SignedIn>
+
+    <SignedOut>
+      <LandingHeader />
       <section className={styles.hero}>
-        <div className="container">
-          <p className={styles.subtitle}>{user && "Welcome!"}</p>
           <h1 className={styles.title}>CodeFlash</h1>
           <p className={styles.subtitle}>The AI generated flashcards you need to learn coding.</p>
           <Link href="/SignUp">
             <button className={styles.ctaButton}>Start your FREE trial!</button>
           </Link>
-        </div>
       </section>
 
-      {/* Learn More Section */}
       <section className={styles.learnMore}>
         <Link href="#learn-more" className={styles.learnMoreLink}>
           <span onClick={handleLearnMoreClick}>Learn More</span><br />
@@ -103,7 +88,6 @@ function Page() {
         </Link>
       </section>
 
-      {/* Scroll Up */}
       <section className={`${styles.learnMore}, ${styles.scrollUp}`}>
         <a
           href="#"
@@ -117,7 +101,6 @@ function Page() {
         </a>
       </section>
 
-      {/* Features Section */}
       <section id="learn-more" className={styles.features}>
         <div className={styles.featureGrid}>
           <div className={styles.featureItem}>
@@ -144,10 +127,10 @@ function Page() {
         </div>
       </section>
 
-      {/* Footer Section */}  
-    </main>
-    <Footer />
-    </>
+      <Footer />
+    </SignedOut>
+  </main>
+  </>
   );
 }
 

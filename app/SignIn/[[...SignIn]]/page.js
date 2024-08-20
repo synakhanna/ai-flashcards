@@ -22,7 +22,7 @@ function LogInPage() {
       <div className={styles.contentWrapper}>
         <h2 className={styles.subTitle}>Sign Into Your Account</h2>
         <div className={styles.formWrapper}>
-          <SignIn afterSignInUrl="/Code" />
+          <SignIn afterSignInUrl="/" />
         </div>
       </div>
     </div><Footer /></>

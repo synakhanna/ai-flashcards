@@ -149,7 +149,7 @@ export default function FlashCardNav({ flashcards, error }) {
         <div className={`${styles.flashcardInner} ${isFlipped ? styles.isFlipped : ''}`}>
           <div className={styles.flashcardFront}>
             {flashcards.length === 0
-              ? "Hello! Select a language to generate flashcards."
+              ? "Select a language to generate flashcards."
               : "Question: " + currentCard.front}
           </div>
           <div className={styles.flashcardBack}>

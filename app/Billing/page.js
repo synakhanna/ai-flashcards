@@ -3,10 +3,7 @@
 import { useState, useEffect } from "react";
 import Footer from "../components/footer";
 import styles from "./Billing.module.css"
-import Link from 'next/link';
-import FlashOnIcon from '@mui/icons-material/FlashOn';
-import {db} from '../firebase';
-import {doc, updateDoc } from 'firebase/firestore';
+import Header from "../components/header";
 import { useClerk } from '@clerk/nextjs';
 
 
@@ -110,18 +107,7 @@ function Billing() {
   return (
    <>
       <div className={styles.pageContainer}>
-        {/* Header Section */}
-        <header className={styles.header}>
-          <Link href="/Code">
-            <div className={styles.logo}>
-              <FlashOnIcon className={styles.logoImage} />
-              <h1 className={styles.title}>CodeFlash</h1>
-            </div>
-          </Link>
-          <Link href="/Code">
-            <button className={styles.homeButton}>Home</button>
-          </Link>
-        </header>
+      <Header></Header>
         <div className={styles.contentWrapper}>
           <h1>Billing</h1>
           <p>Get a subscription to use CodeFlash! Only $6.99 a month.</p>

@@ -4,10 +4,6 @@ import styles from '../signup.module.css';
 import Link from 'next/link';
 import Footer from '../../components/footer';
 import { SignUp, useAuth } from '@clerk/nextjs';
-import {useRouter} from 'next/navigation';
-import {useEffect} from 'react';
-
-
 
 function SignIn() {
 
@@ -27,7 +23,7 @@ function SignIn() {
     <div className={styles.contentWrapper}>
       <h2 className={styles.subTitle}>Create Your Account</h2>
       <div className={styles.formWrapper}>
-        <SignUp afterSignUpUrl="/Code" />
+        <SignUp afterSignUpUrl="/" />
       </div>
     </div>
   </div>
