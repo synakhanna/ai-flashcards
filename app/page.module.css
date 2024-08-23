@@ -5,18 +5,34 @@
   color: #FFFFFF;
   font-family: 'Fira Code', monospace;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Ensures the content covers the entire viewport */
 }
 
-.welcomeSection {
+
+.welcomeSection, .hero {
+  height: 77vh;
   text-align: center;
   max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  padding: 50px 0;
+  flex: 1; /* Ensures it takes up available space */
+}
+
+
+.title {
+  font-size: 90px;
+  margin: 0;
+}
+
+.subtitle {
+  padding: 20px;
+  font-size: 40px;
+  border-radius: 10px;
 }
 
 .welcomeMessage {
@@ -26,26 +42,17 @@
   border-radius: 10px;
 }
 
+
 .hero {
-  text-align: center;
-  padding: 60px 20px;
-  padding-top: 20px;
-}
-
-.title {
-  font-size: 100px;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 50px;
-  margin: 60px 30px;
+  flex-direction: column;
+  padding: 20px;
+  flex: 1;
 }
 
 .ctaButton {
   background-color: rgba(255, 255, 255, 0.8);
   color: #0D1B2A;
-  padding: 10px 100px;
+  padding: 15px 40px; /* Adjusted padding for better spacing */
   font-size: 18px;
   border: none;
   cursor: pointer;
@@ -53,11 +60,17 @@
   font-weight: bold;
   font-family: 'Fira Code', monospace;
   transition: all 0.3s ease-in-out;
+  text-align: center;
+  white-space: nowrap; /* Prevents text from wrapping */
+  display: inline-block; /* Ensures the button expands based on content */
+  min-width: 250px; /* Ensures the button has a minimum width */
 }
 
 .ctaButton:hover {
-  font-size: 25px;
+  transform: scale(1.05);
+  background-color: #fff;
 }
+
 
 .ctaContainer {
   display: flex;
@@ -67,8 +80,9 @@
 
 .learnMore {
   text-align: center;
-  font-size: 60px;
-  margin-bottom: 15%;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 2vh;
 }
 
 .learnMoreLink {
@@ -76,7 +90,8 @@
   text-decoration: none;
   color: #FFFFFF;
   display: inline-block;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .scrollUp {
@@ -129,7 +144,7 @@
 
   .subtitle {
     font-size: 40px;
-    margin: 50px 25px;
+    margin: 40px 0;
   }
 
   .ctaButton {
@@ -137,18 +152,16 @@
     font-size: 18px;
   }
 
-  .ctaButton:hover {
-    font-size: 22px;
-  }
-
   .learnMore {
     display: none;
   }
 
   .scrollUp {
-    display: none;
+    font-size: 60px;
+    cursor: pointer;
+    color: #FFFFFF;
   }
-
+  
   .featureItem h3 {
     font-size: 35px;
   }
@@ -172,9 +185,15 @@
   .subtitle {
     font-size: 30px;
   }
-
   .ctaButton {
-    padding: 10px 50px;
+    font-size: 16px;
+    padding: 10px 20px; /* Reduce padding for smaller screens */
+    min-width: 200px; /* Ensure the button has a reasonable width on small screens */
+  }
+
+  .learnMoreLink {
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .featureGrid {
@@ -186,6 +205,7 @@
     font-size: 30px;
   }
 }
+
 @media (max-width: 480px) {
   .header {
     margin-left: 5px;
@@ -198,7 +218,7 @@
   }
 
   .title {
-    display: none;
+    font-size: 40px;
   }
 
   .subtitle {
@@ -209,6 +229,13 @@
   .ctaButton {
     padding: 8px 30px;
     font-size: 14px;
+    width: 90%;
+    max-width: 200px;
+  }
+
+  .learnMoreLink {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .featureGrid {
