@@ -157,9 +157,8 @@
   }
 
   .scrollUp {
-    font-size: 60px;
-    cursor: pointer;
-    color: #FFFFFF;
+    display: none;
+
   }
   
   .featureItem h3 {
@@ -191,9 +190,8 @@
     min-width: 200px; /* Ensure the button has a reasonable width on small screens */
   }
 
-  .learnMoreLink {
-    font-size: 24px;
-    margin-bottom: 10px;
+  .learnMore {
+    display: none;
   }
 
   .featureGrid {
@@ -207,9 +205,12 @@
 }
 
 @media (max-width: 480px) {
+  .welcomeSection, .hero {
+    margin-top: 40px;
+  }
+  
   .header {
-    margin-left: 5px;
-    margin-right: 5px;
+    padding: 20px 5px;
   }
 
   .hero {
@@ -218,31 +219,27 @@
   }
 
   .title {
-    font-size: 40px;
-  }
+    display: none;
+}
+.subtitle {
+    font-size: 18px;
+}
 
-  .subtitle {
-    font-size: 20px;
-    margin-top: 0;
-  }
+.ctaButton {
+  padding: 12px 30px;
+  font-size: 16px;
+  width: 95%;
+}
 
-  .ctaButton {
-    padding: 8px 30px;
-    font-size: 14px;
-    width: 90%;
-    max-width: 200px;
-  }
-
-  .learnMoreLink {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
+.learnMore {
+  display: none;
+}
 
   .featureGrid {
-    grid-gap: 15px;
-  }
-
-  .featureItem h3 {
-    font-size: 24px;
-  }
+    padding: 10px;
+    grid-gap: 10px;
+}
+.featureItem h3 {
+    font-size: 20px;
+}
 }
