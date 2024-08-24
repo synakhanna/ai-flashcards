@@ -35,7 +35,7 @@ export async function POST(req) {
                             product_data: {
                                 name: "CodeFlash",
                             },
-                            unit_amount: formatAmountForStripe(6.99, "usd"),
+                            unit_amount: formatAmountForStripe(1.99, "usd"),
                             recurring: {
                                 interval: "month",
                                 interval_count: 1,
