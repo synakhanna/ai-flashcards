@@ -152,7 +152,7 @@ function Billing() {
     onClick={handleCheckout}
     disabled={loading}
   >
-    <p>Get a subscription to use CodeFlash! Only $6.99 a month.</p>
+    <p>Get a subscription to use CodeFlash! Only $1.99 a month.</p>
     {loading ? 'Redirecting...' : 'Start Subscription'}
   </button>
 )}
